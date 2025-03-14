@@ -1,3 +1,9 @@
+if(!require(remotes)){
+  print("You are missing the package 'remotes', we will now try to install it...")
+  install.packages("remotes")
+  library(remotes)
+}
+
 if(!require(sf)){
   print("You are missing the package 'sf', we will now try to install it...")
   install.packages("sf")
@@ -61,8 +67,7 @@ if(!require(cartography))
   library(cartography)
 }
 
-
-
+#never called in the code
 if(!require(rgeos))
 {
   print("You are missing the package 'rgeos', we will now try to install it...")
@@ -70,12 +75,13 @@ if(!require(rgeos))
   library(rgeos)
 }
 
-if(!require(rgdal))
-{
-  print("You are missing the package 'rgdal', we will now try to install it...")
-  install.packages("rgdal", type="source")
-  library(rgdal)
-}
+#never called in the code
+#if(!require(rgdal))
+#{
+#  print("You are missing the package 'rgdal', we will now try to install it...")
+#  install.packages("rgdal", type="source")
+#  library(rgdal)
+#}
 
 if(!require(ggplot2))
 {
@@ -105,12 +111,13 @@ if(!require(raster))
   library(raster)
 }
 
-if(!require(maptools))
-{
-  print("You are missing the package 'maptools', we will now try to install it...")
-  install.packages("maptools")
-  library(maptools)
-}
+#never called in the code
+#if(!require(maptools))
+#{
+#  print("You are missing the package 'maptools', we will now try to install it...")
+#  install.packages("maptools")
+#  library(maptools)
+#}
 
 if(!require(chron))
 {
@@ -147,13 +154,6 @@ if(!require(jsonlite))
   library(jsonlite)
 }
 
-if(!require(rgdal))
-{
-  print("You are missing the package 'rgdal', we will now try to install it...")
-  install.packages("rgdal")
-  library(rgdal)
-}
-
 if(!require(data.table))
 {
   print("You are missing the package 'data.table', we will now try to install it...")
@@ -161,12 +161,13 @@ if(!require(data.table))
   library(data.table)
 }
 
-if(!require(gdata))
-{
-  print("You are missing the package 'gdata', we will now try to install it...")
-  install.packages("gdata")
-  library(gdata)
-}
+#never called in the code
+#if(!require(gdata))
+#{
+#  print("You are missing the package 'gdata', we will now try to install it...")
+#  install.packages("gdata")
+#  library(gdata)
+#}
 
 
 if(!require(tcltk))
@@ -202,10 +203,17 @@ if(!require(classInt))
   library(classInt)
 }
 
+if(!require(igraph))
+{
+  print("You are missing the package 'igraph', we will now try to install it...")
+  install.packages("igraph")
+  library(igraph)
+}
+
 if(!require(flows))
 {
   print("You are missing the package 'flows', we will now try to install it...")
-  install.packages("flows")
+  install.packages("https://cran.r-project.org/src/contrib/Archive/flows/flows_1.1.1.tar.gz", repos = NULL, type = 'source',dependencies = TRUE)
   library(flows)
 }
 

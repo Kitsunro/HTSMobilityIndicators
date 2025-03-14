@@ -1,4 +1,3 @@
-
 source('utils.r')
 
 parser <- setParser('Prepare files for indicators')
@@ -15,11 +14,13 @@ loadPackages(c('plyr', 'tidyverse', 'sf', 'foreign', 'rlang'))
 #--------------------------------------------
 # load the shapefiles for each territorial partition
 
+sf_use_s2(FALSE)  # Disable the use of S2 geometry library
+
 getSamplePoints <- function(points, sf){ # generate random points within each spatial location to represent activities or modes of transport (used on the STC)
   
   sample <- apply(sf, 1, function(x){
     points <- st_sample(x$geometry, size = points, exact = TRUE)
-    tbl <- tibble(name = as.character(), code = as.numeric(), index = as.numeric(), lat = as.character(), long = as.character())
+    tbl <- tibble(name = as.character(), code = as.numeric(), index = as.numeric(), lat = numeric(), long = numeric())
     for (p in points){
       coord <- st_coordinates(p)
       tbl <- add_row(tbl, name = x$name, code = x$code, index = nrow(tbl), lat = coord[2], long = coord[1])
@@ -27,7 +28,7 @@ getSamplePoints <- function(points, sf){ # generate random points within each sp
     tbl
   })
   
-  points <- tibble(name = as.character(), code = as.numeric(), index = as.numeric(), lat = as.character(), long = as.character())
+  points <- tibble(name = as.character(), code = as.numeric(), index = as.numeric(), lat = numeric(), long = numeric())
   for (l in sample){
     points <- bind_rows(points, as.data.frame(l))
   }
@@ -41,11 +42,14 @@ for (p in args$partitions){
   sf <- st_read(file_path, stringsAsFactors = FALSE) %>%
     st_transform("+proj=longlat +ellps=GRS80") 
   
+  st <- st_make_valid(sf)  # Ensure geometries are valid
+  st <- st_buffer(st, 0)   # Apply a small buffer to fix any remaining issues
+
   st <- sf %>% select(code, name)
     
   print('Computing centroids for each shape...')
   # calculate the centroid of each shape
-  centroids <- st_centroid(sf, byid = TRUE)
+  centroids <- st_centroid(st, byid = TRUE)  # Use the valid geometries
   coords <- as_tibble(st_coordinates(centroids$geometry))
   centroids$lat <- coords$Y
   centroids$long <- coords$X

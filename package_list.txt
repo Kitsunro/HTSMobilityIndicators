@@ -1,0 +1,15 @@
+zip          usethis      tensor           spatstat.explore  rprojroot   purrr        pkgconfig       maps               labeling     hms            geojsonsf    e1071        cpp11        brio            RPostgres
+yaml         units        systemfonts      spatstat.data     rmarkdown   ps           pkgbuild        magrittr           knitr        highr          generics     dtplyr       covr         brew            RPostgreSQL
+xml2         tzdb         sys              spatstat          rlang       proxy        pillar          lwgeom             jsonlite     haven          gdata        dplyr        conflicted   blob            RColorBrewer
+xfun         tmaptools    svglite          spacesXYZ         rex         promises     permute         lubridate          jsonify      gtools         gargle       doParallel   cols4all     bit64           R6
+wk           tmap         stringr          sp                reshape2    progress     pbapply         logger             jquerylib    gtable         fs           digest       colorspace   bit             PBSmapping
+withr        tinytex      stringi          sfheaders         reprex      processx     openssl         lifecycle          iterators    gridExtra      foreign      diffobj      clipr        base64enc       NISTunits
+whisker      timechange   stringdist       sf                remotes     prettyunits  odbc            leafsync           isoband      googlesheets4  foreach      dichromat    cli          backports       DBI
+waldo        tigris       stars            servr             rematch2    praise       nanoarrow       leafpop            ini          googledrive    forcats      desc         classInt     askpass
+vroom        tidyverse    spatstat.utils   selectr           rematch     pool         munsell         leaflet.providers  igraph       goftest        fontawesome  deldir       chron        argparse
+viridisLite  tidyselect   spatstat.univar  scales            readxl      polyclip     modelr          leaflet            ids          glue           flows        dbplyr       cellranger   abind
+vegan        tidyr        spatstat.sparse  satellite         readr       png          mime            leaflegend         httr2        gitcreds       findpython   data.table   cartography  XML
+vdiffr       tibble       spatstat.random  sass              raster      plyr         microbenchmark  leafgl             httr         gh             fastmap      curl         callr        TraMineRextras
+vctrs        textshaping  spatstat.model   s2                rappdirs    plotly       memoise         leafem             httpuv       ggplot2        farver       crosstalk    cachem       TraMineR
+uuid         testthat     spatstat.linnet  rvest             rapidjsonr  plogr        measurements    lazyeval           htmlwidgets  gert           fansi        credentials  bslib        Rcpp
+utf8         terra        spatstat.geom    rstudioapi        ragg        pkgload      mapview         later              htmltools    geometries     evaluate     crayon       broom        RSQLite

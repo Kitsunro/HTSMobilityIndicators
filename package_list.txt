@@ -13,3 +13,7 @@ vdiffr       tibble       spatstat.random  sass              raster      plyr   
 vctrs        textshaping  spatstat.model   s2                rappdirs    plotly       memoise         leafem             httpuv       ggplot2        farver       crosstalk    cachem       TraMineR
 uuid         testthat     spatstat.linnet  rvest             rapidjsonr  plogr        measurements    lazyeval           htmlwidgets  gert           fansi        credentials  bslib        Rcpp
 utf8         terra        spatstat.geom    rstudioapi        ragg        pkgload      mapview         later              htmltools    geometries     evaluate     crayon       broom        RSQLite
+
+
+apt package:
+    libharfbuzz-dev libfribidi-dev libfontconfig1-dev libgdal-dev libudunits2-dev

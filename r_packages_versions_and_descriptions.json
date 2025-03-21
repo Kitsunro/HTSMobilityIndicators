@@ -1,598 +1,757 @@
 {
     "PBSmapping": {
         "version": "2.74.1",
-        "description": "This software has evolved from fisheries research conducted at the Pacific Biological Station (PBS) in 'Nanaimo', British Columbia, Canada. It extends the R language to include two-dimensional plotting features similar to those commonly available in a Geographic Information System (GIS). Embedded C code speeds algorithms from computational geometry, such as finding polygons that contain specified point events or converting between longitude-latitude and Universal Transverse Mercator (UTM) coordinates. Additionally, we include 'C++' code developed by Angus Johnson for the 'Clipper' library, data for a global shoreline, and other data sets in the public domain. Under the user's R library directory '.libPaths()', specifically in './PBSmapping/doc', a complete user's guide is offered and should be consulted to use package functions effectively."
+        "description": "This software has evolved from fisheries research conducted at the Pacific Biological Station (PBS) in 'Nanaimo', British Columbia, Canada. It extends the R language to include two-dimensional plotting features similar to those commonly available in a Geographic Information System (GIS). Embedded C code speeds algorithms from computational geometry, such as finding polygons that contain specified point events or converting between longitude-latitude and Universal Transverse Mercator (UTM) coordinates. Additionally, we include 'C++' code developed by Angus Johnson for the 'Clipper' library, data for a global shoreline, and other data sets in the public domain. Under the user's R library directory '.libPaths()', specifically in './PBSmapping/doc', a complete user's guide is offered and should be consulted to use package functions effectively.",
+        "usage": "Used for GIS-related plotting and spatial data manipulation."
     },
     "reshape2": {
         "version": "1.4.4",
-        "description": "Flexibly restructure and aggregate data using just two functions: melt and 'dcast' (or 'acast')."
+        "description": "Flexibly restructure and aggregate data using just two functions: melt and 'dcast' (or 'acast').",
+        "usage": "Used for reshaping and aggregating data."
     },
     "forcats": {
         "version": "1.0.0",
-        "description": "Helpers for reordering factor levels (including moving specified levels to front, ordering by first appearance, reversing, and randomly shuffling), and tools for modifying factor levels (including collapsing rare levels into other, 'anonymising', and manually 'recoding')."
+        "description": "Helpers for reordering factor levels (including moving specified levels to front, ordering by first appearance, reversing, and randomly shuffling), and tools for modifying factor levels (including collapsing rare levels into other, 'anonymising', and manually 'recoding').",
+        "usage": "Used for handling and modifying factor levels in categorical data."
     },
     "rprojroot": {
         "version": "2.0.4",
-        "description": "Robust, reliable and flexible paths to files below a project root. The 'root' of a project is defined as a directory that matches a certain criterion, e.g., it contains a certain regular file."
+        "description": "Robust, reliable and flexible paths to files below a project root. The 'root' of a project is defined as a directory that matches a certain criterion, e.g., it contains a certain regular file.",
+        "usage": "Used for managing project file paths."
     },
     "proxy": {
         "version": "0.4-27",
-        "description": "Provides an extensible framework for the efficient calculation of auto- and cross-proximities, along with implementations of the most popular ones."
+        "description": "Provides an extensible framework for the efficient calculation of auto- and cross-proximities, along with implementations of the most popular ones.",
+        "usage": "Used for calculating proximities and distances between data points."
     },
     "dbplyr": {
         "version": "2.5.0",
-        "description": "A 'dplyr' back end for databases that allows you to work with remote database tables as if they are in-memory data frames.  Basic features works with any database that has a 'DBI' back end; more advanced features require 'SQL' translation to be provided by the package author."
+        "description": "A 'dplyr' back end for databases that allows you to work with remote database tables as if they are in-memory data frames.  Basic features works with any database that has a 'DBI' back end; more advanced features require 'SQL' translation to be provided by the package author.",
+        "usage": "Used for interacting with databases using dplyr syntax."
     },
     "diffobj": {
         "version": "0.3.5",
-        "description": "Generate a colorized diff of two R objects for an intuitive visualization of their differences."
+        "description": "Generate a colorized diff of two R objects for an intuitive visualization of their differences.",
+        "usage": "Used for visualizing differences between R objects."
     },
     "knitr": {
         "version": "1.49",
-        "description": "Provides a general-purpose tool for dynamic report generation in R using Literate Programming techniques."
+        "description": "Provides a general-purpose tool for dynamic report generation in R using Literate Programming techniques.",
+        "usage": "Used for dynamic report generation in R."
     },
     "digest": {
         "version": "0.6.37",
-        "description": "Implementation of a function 'digest()' for the creation of hash digests of arbitrary R objects (using the 'md5', 'sha-1', 'sha-256', 'crc32', 'xxhash', 'murmurhash', 'spookyhash', 'blake3', 'crc32c', 'xxh3_64', and 'xxh3_128' algorithms) permitting easy comparison of R language objects, as well as functions such as'hmac()' to create hash-based message authentication code. Please note that this package is not meant to be deployed for cryptographic purposes for which more comprehensive (and widely tested) libraries such as 'OpenSSL' should be used."
+        "description": "Implementation of a function 'digest()' for the creation of hash digests of arbitrary R objects (using the 'md5', 'sha-1', 'sha-256', 'crc32', 'xxhash', 'murmurhash', 'spookyhash', 'blake3', 'crc32c', 'xxh3_64', and 'xxh3_128' algorithms) permitting easy comparison of R language objects, as well as functions such as'hmac()' to create hash-based message authentication code. Please note that this package is not meant to be deployed for cryptographic purposes for which more comprehensive (and widely tested) libraries such as 'OpenSSL' should be used.",
+        "usage": "Used for creating hash digests of R objects."
     },
     "timechange": {
         "version": "0.3.0",
-        "description": "Efficient routines for manipulation of date-time objects while accounting for time-zones and daylight saving times. The package includes utilities for updating of date-time components (year, month, day etc.), modification of time-zones, rounding of date-times, period addition and subtraction etc. Parts of the 'CCTZ' source code, released under the Apache 2.0 License, are included in this package. See <https://github.com/google/cctz> for more details."
+        "description": "Efficient routines for manipulation of date-time objects while accounting for time-zones and daylight saving times. The package includes utilities for updating of date-time components (year, month, day etc.), modification of time-zones, rounding of date-times, period addition and subtraction etc. Parts of the 'CCTZ' source code, released under the Apache 2.0 License, are included in this package. See <https://github.com/google/cctz> for more details.",
+        "usage": "Used for manipulating date-time objects."
     },
     "tzdb": {
         "version": "0.4.0",
-        "description": "Provides an up-to-date copy of the Internet Assigned Numbers Authority (IANA) Time Zone Database. It is updated periodically to reflect changes made by political bodies to time zone boundaries, UTC offsets, and daylight saving time rules. Additionally, this package provides a C++ interface for working with the 'date' library. 'date' provides comprehensive support for working with dates and date-times, which this package exposes to make it easier for other R packages to utilize. Headers are provided for calendar specific calculations, along with a limited interface for time zone manipulations."
+        "description": "Provides an up-to-date copy of the Internet Assigned Numbers Authority (IANA) Time Zone Database. It is updated periodically to reflect changes made by political bodies to time zone boundaries, UTC offsets, and daylight saving time rules. Additionally, this package provides a C++ interface for working with the 'date' library. 'date' provides comprehensive support for working with dates and date-times, which this package exposes to make it easier for other R packages to utilize. Headers are provided for calendar specific calculations, along with a limited interface for time zone manipulations.",
+        "usage": "Used for working with time zone data."
     },
     "promises": {
         "version": "1.3.2",
-        "description": "Provides fundamental abstractions for doing asynchronous programming in R using promises. Asynchronous programming is useful for allowing a single R process to orchestrate multiple tasks in the background while also attending to something else. Semantics are similar to 'JavaScript' promises, but with a syntax that is idiomatic R."
+        "description": "Provides fundamental abstractions for doing asynchronous programming in R using promises. Asynchronous programming is useful for allowing a single R process to orchestrate multiple tasks in the background while also attending to something else. Semantics are similar to 'JavaScript' promises, but with a syntax that is idiomatic R.",
+        "usage": "Used for asynchronous programming in R."
     },
     "modelr": {
         "version": "0.1.11",
-        "description": "Functions for modelling that help you seamlessly integrate modelling into a pipeline of data manipulation and visualisation."
+        "description": "Functions for modelling that help you seamlessly integrate modelling into a pipeline of data manipulation and visualisation.",
+        "usage": "Used for integrating modelling into data manipulation and visualization pipelines."
     },
     "farver": {
         "version": "2.1.2",
-        "description": "The encoding of colour can be handled in many different ways, using different colour spaces. As different colour spaces have different uses, efficient conversion between these representations are important. The 'farver' package provides a set of functions that gives access to very fast colour space conversion and comparisons implemented in C++, and offers speed improvements over the 'convertColor' function in the 'grDevices' package."
+        "description": "The encoding of colour can be handled in many different ways, using different colour spaces. As different colour spaces have different uses, efficient conversion between these representations are important. The 'farver' package provides a set of functions that gives access to very fast colour space conversion and comparisons implemented in C++, and offers speed improvements over the 'convertColor' function in the 'grDevices' package.",
+        "usage": "Used for fast color space conversion and comparisons."
     },
     "bslib": {
         "version": "0.9.0",
-        "description": "Simplifies custom 'CSS' styling of both 'shiny' and 'rmarkdown' via 'Bootstrap' 'Sass'. Supports 'Bootstrap' 3, 4 and 5 as well as their various 'Bootswatch' themes. An interactive widget is also provided for previewing themes in real time."
+        "description": "Simplifies custom 'CSS' styling of both 'shiny' and 'rmarkdown' via 'Bootstrap' 'Sass'. Supports 'Bootstrap' 3, 4 and 5 as well as their various 'Bootswatch' themes. An interactive widget is also provided for previewing themes in real time.",
+        "usage": "Used for custom CSS styling of shiny and rmarkdown."
     },
     "fontawesome": {
         "version": "0.5.3",
-        "description": "Easily and flexibly insert 'Font Awesome' icons into 'R Markdown' documents and 'Shiny' apps. These icons can be inserted into HTML content through inline 'SVG' tags or 'i' tags. There is also a utility function for exporting 'Font Awesome' icons as 'PNG' images for those situations where raster graphics are needed."
+        "description": "Easily and flexibly insert 'Font Awesome' icons into 'R Markdown' documents and 'Shiny' apps. These icons can be inserted into HTML content through inline 'SVG' tags or 'i' tags. There is also a utility function for exporting 'Font Awesome' icons as 'PNG' images for those situations where raster graphics are needed.",
+        "usage": "Used for inserting Font Awesome icons into R Markdown and Shiny apps."
     },
     "leaflet": {
         "version": "2.2.2",
-        "description": "Create and customize interactive maps using the 'Leaflet' JavaScript library and the 'htmlwidgets' package. These maps can be used directly from the R console, from 'RStudio', in Shiny applications and R Markdown documents."
+        "description": "Create and customize interactive maps using the 'Leaflet' JavaScript library and the 'htmlwidgets' package. These maps can be used directly from the R console, from 'RStudio', in Shiny applications and R Markdown documents.",
+        "usage": "Used for creating and customizing interactive maps."
     },
     "plotly": {
         "version": "4.10.4",
-        "description": "Create interactive web graphics from 'ggplot2' graphs and/or a custom interface to the (MIT-licensed) JavaScript library 'plotly.js' inspired by the grammar of graphics."
+        "description": "Create interactive web graphics from 'ggplot2' graphs and/or a custom interface to the (MIT-licensed) JavaScript library 'plotly.js' inspired by the grammar of graphics.",
+        "usage": "Used for creating interactive web graphics."
     },
     "broom": {
         "version": "1.0.7",
-        "description": "Summarizes key information about statistical objects in tidy tibbles. This makes it easy to report results, create plots and consistently work with large numbers of models at once. Broom provides three verbs that each provide different types of information about a model. tidy() summarizes information about model components such as coefficients of a regression. glance() reports information about an entire model, such as goodness of fit measures like AIC and BIC. augment() adds information about individual observations to a dataset, such as fitted values or influence measures."
+        "description": "Summarizes key information about statistical objects in tidy tibbles. This makes it easy to report results, create plots and consistently work with large numbers of models at once. Broom provides three verbs that each provide different types of information about a model. tidy() summarizes information about model components such as coefficients of a regression. glance() reports information about an entire model, such as goodness of fit measures like AIC and BIC. augment() adds information about individual observations to a dataset, such as fitted values or influence measures.",
+        "usage": "Used for summarizing statistical objects in tidy tibbles."
     },
     "gridExtra": {
         "version": "2.3",
-        "description": "Provides a number of user-level functions to work with \"grid\" graphics, notably to arrange multiple grid-based plots on a page, and draw tables."
+        "description": "Provides a number of user-level functions to work with \"grid\" graphics, notably to arrange multiple grid-based plots on a page, and draw tables.",
+        "usage": "Used for arranging multiple grid-based plots and drawing tables."
     },
     "flows": {
         "version": "1.1.1",
-        "description": "Selections on flow matrices, statistics on selected flows, map and graph visualisations."
+        "description": "Selections on flow matrices, statistics on selected flows, map and graph visualisations.",
+        "usage": "Used for working with flow matrices and visualizations."
     },
     "reprex": {
         "version": "2.1.1",
-        "description": "Convenience wrapper that uses the 'rmarkdown' package to render small snippets of code to target formats that include both code and output.  The goal is to encourage the sharing of small, reproducible, and runnable examples on code-oriented websites, such as <https://stackoverflow.com> and <https://github.com>, or in email. The user's clipboard is the default source of input code and the default target for rendered output. 'reprex' also extracts clean, runnable R code from various common formats, such as copy/paste from an R session."
+        "description": "Convenience wrapper that uses the 'rmarkdown' package to render small snippets of code to target formats that include both code and output.  The goal is to encourage the sharing of small, reproducible, and runnable examples on code-oriented websites, such as <https://stackoverflow.com> and <https://github.com>, or in email. The user's clipboard is the default source of input code and the default target for rendered output. 'reprex' also extracts clean, runnable R code from various common formats, such as copy/paste from an R session.",
+        "usage": "Used for creating reproducible examples of R code."
     },
     "s2": {
         "version": "1.1.7",
-        "description": "Provides R bindings for Google's s2 library for geometric calculations on the sphere. High-performance constructors and exporters provide high compatibility with existing spatial packages, transformers construct new geometries from existing geometries, predicates provide a means to select geometries based on spatial relationships, and accessors extract information about geometries."
+        "description": "Provides R bindings for Google's s2 library for geometric calculations on the sphere. High-performance constructors and exporters provide high compatibility with existing spatial packages, transformers construct new geometries from existing geometries, predicates provide a means to select geometries based on spatial relationships, and accessors extract information about geometries.",
+        "usage": "Used for geometric calculations on the sphere."
     },
     "evaluate": {
         "version": "1.0.3",
-        "description": "Parsing and evaluation tools that make it easy to recreate the command line behaviour of R."
+        "description": "Parsing and evaluation tools that make it easy to recreate the command line behaviour of R.",
+        "usage": "Used for parsing and evaluating R code."
     },
     "rappdirs": {
         "version": "0.3.3",
-        "description": "An easy way to determine which directories on the users computer you should use to save data, caches and logs. A port of Python's 'Appdirs' (<https://github.com/ActiveState/appdirs>) to R."
+        "description": "An easy way to determine which directories on the users computer you should use to save data, caches and logs. A port of Python's 'Appdirs' (<https://github.com/ActiveState/appdirs>) to R.",
+        "usage": "Used for determining directories to save data, caches, and logs."
     },
     "pillar": {
         "version": "1.10.1",
-        "description": "Provides 'pillar' and 'colonnade' generics designed for formatting columns of data using the full range of colours provided by modern terminals."
+        "description": "Provides 'pillar' and 'colonnade' generics designed for formatting columns of data using the full range of colours provided by modern terminals.",
+        "usage": "Used for formatting columns of data."
     },
     "ps": {
         "version": "1.9.0",
-        "description": "List, query and manipulate all system processes, on 'Windows', 'Linux' and 'macOS'."
+        "description": "List, query and manipulate all system processes, on 'Windows', 'Linux' and 'macOS'.",
+        "usage": "Used for managing system processes."
     },
     "fastmap": {
         "version": "1.2.0",
-        "description": "Fast implementation of data structures, including a key-value store, stack, and queue. Environments are commonly used as key-value stores in R, but every time a new key is used, it is added to R's global symbol table, causing a small amount of memory leakage. This can be problematic in cases where many different keys are used. Fastmap avoids this memory leak issue by implementing the map using data structures in C++."
+        "description": "Fast implementation of data structures, including a key-value store, stack, and queue. Environments are commonly used as key-value stores in R, but every time a new key is used, it is added to R's global symbol table, causing a small amount of memory leakage. This can be problematic in cases where many different keys are used. Fastmap avoids this memory leak issue by implementing the map using data structures in C++.",
+        "usage": "Used for fast implementation of data structures."
     },
     "rvest": {
         "version": "1.0.4",
-        "description": "Wrappers around the 'xml2' and 'httr' packages to make it easy to download, then manipulate, HTML and XML."
+        "description": "Wrappers around the 'xml2' and 'httr' packages to make it easy to download, then manipulate, HTML and XML.",
+        "usage": "Used for downloading and manipulating HTML and XML."
     },
     "readxl": {
         "version": "1.4.5",
-        "description": "Import excel files into R. Supports '.xls' via the embedded 'libxls' C library <https://github.com/libxls/libxls> and '.xlsx' via the embedded 'RapidXML' C++ library <https://rapidxml.sourceforge.net/>. Works on Windows, Mac and Linux without external dependencies."
+        "description": "Import excel files into R. Supports '.xls' via the embedded 'libxls' C library <https://github.com/libxls/libxls> and '.xlsx' via the embedded 'RapidXML' C++ library <https://rapidxml.sourceforge.net/>. Works on Windows, Mac and Linux without external dependencies.",
+        "usage": "Used for importing Excel files into R."
     },
     "hms": {
         "version": "1.1.3",
-        "description": "Implements an S3 class for storing and formatting time-of-day values, based on the 'difftime' class."
+        "description": "Implements an S3 class for storing and formatting time-of-day values, based on the 'difftime' class.",
+        "usage": "Used for storing and formatting time-of-day values."
     },
     "conflicted": {
         "version": "1.2.0",
-        "description": "R's default conflict management system gives the most recently loaded package precedence. This can make it hard to detect conflicts, particularly when they arise because a package update creates ambiguity that did not previously exist. 'conflicted' takes a different approach, making every conflict an error and forcing you to choose which function to use."
+        "description": "R's default conflict management system gives the most recently loaded package precedence. This can make it hard to detect conflicts, particularly when they arise because a package update creates ambiguity that did not previously exist. 'conflicted' takes a different approach, making every conflict an error and forcing you to choose which function to use.",
+        "usage": "Used for managing conflicts between R packages."
     },
     "covr": {
         "version": "3.6.4",
-        "description": "Track and report code coverage for your package and (optionally) upload the results to a coverage service like 'Codecov' <https://about.codecov.io> or 'Coveralls' <https://coveralls.io>. Code coverage is a measure of the amount of code being exercised by a set of tests. It is an indirect measure of test quality and completeness. This package is compatible with any testing methodology or framework and tracks coverage of both R code and compiled C/C++/FORTRAN code."
+        "description": "Track and report code coverage for your package and (optionally) upload the results to a coverage service like 'Codecov' <https://about.codecov.io> or 'Coveralls' <https://coveralls.io>. Code coverage is a measure of the amount of code being exercised by a set of tests. It is an indirect measure of test quality and completeness. This package is compatible with any testing methodology or framework and tracks coverage of both R code and compiled C/C++/FORTRAN code.",
+        "usage": "Used for tracking and reporting code coverage."
     },
     "e1071": {
         "version": "1.7-16",
-        "description": "Functions for latent class analysis, short time Fourier"
+        "description": "Functions for latent class analysis, short time Fourier",
+        "usage": "Used for latent class analysis and short time Fourier transforms."
     },
     "isoband": {
         "version": "0.2.7",
-        "description": "A fast C++ implementation to generate contour lines (isolines) and contour polygons (isobands) from regularly spaced grids containing elevation data."
+        "description": "A fast C++ implementation to generate contour lines (isolines) and contour polygons (isobands) from regularly spaced grids containing elevation data.",
+        "usage": "Used for generating contour lines and polygons."
     },
     "googledrive": {
         "version": "2.1.1",
-        "description": "Manage Google Drive files from R."
+        "description": "Manage Google Drive files from R.",
+        "usage": "Used for managing Google Drive files."
     },
     "TraMineR": {
         "version": "2.2-11",
-        "description": "Set of sequence analysis tools for manipulating, describing and rendering categorical sequences, and more generally mining sequence data in the field of social sciences. Although this sequence analysis package is primarily intended for state or event sequences that describe time use or life courses such as family formation histories or professional careers, its features also apply to many other kinds of categorical sequence data. It accepts many different sequence representations as input and provides tools for converting sequences from one format to another. It offers several functions for describing and rendering sequences, for computing distances between sequences with different metrics (among which optimal matching), original dissimilarity-based analysis tools, and functions for extracting the most frequent event subsequences and identifying the most discriminating ones among them. A user's guide can be found on the TraMineR web page."
+        "description": "Set of sequence analysis tools for manipulating, describing and rendering categorical sequences, and more generally mining sequence data in the field of social sciences. Although this sequence analysis package is primarily intended for state or event sequences that describe time use or life courses such as family formation histories or professional careers, its features also apply to many other kinds of categorical sequence data. It accepts many different sequence representations as input and provides tools for converting sequences from one format to another. It offers several functions for describing and rendering sequences, for computing distances between sequences with different metrics (among which optimal matching), original dissimilarity-based analysis tools, and functions for extracting the most frequent event subsequences and identifying the most discriminating ones among them. A user's guide can be found on the TraMineR web page.",
+        "usage": "Used for sequence analysis in social sciences."
     },
     "cachem": {
         "version": "1.1.0",
-        "description": "Key-value stores with automatic pruning. Caches can limit either their total size or the age of the oldest object (or both), automatically pruning objects to maintain the constraints."
+        "description": "Key-value stores with automatic pruning. Caches can limit either their total size or the age of the oldest object (or both), automatically pruning objects to maintain the constraints.",
+        "usage": "Used for key-value stores with automatic pruning."
     },
     "xml2": {
         "version": "1.3.7",
-        "description": "Bindings to 'libxml2' for working with XML data using a simple, consistent interface based on 'XPath' expressions. Also supports XML schema validation; for 'XSLT' transformations see the 'xslt' package."
+        "description": "Bindings to 'libxml2' for working with XML data using a simple, consistent interface based on 'XPath' expressions. Also supports XML schema validation; for 'XSLT' transformations see the 'xslt' package.",
+        "usage": "Used for working with XML data."
     },
     "withr": {
         "version": "3.0.2",
-        "description": "A set of functions to run code 'with' safely and temporarily modified global state. Many of these functions were originally a part of the 'devtools' package, this provides a simple package with limited dependencies to provide access to these functions."
+        "description": "A set of functions to run code 'with' safely and temporarily modified global state. Many of these functions were originally a part of the 'devtools' package, this provides a simple package with limited dependencies to provide access to these functions.",
+        "usage": "Used for running code with temporarily modified global state."
     },
     "DBI": {
         "version": "1.2.3",
-        "description": "A database interface definition for communication between R and relational database management systems.  All classes in this package are virtual and need to be extended by the various R/DBMS implementations."
+        "description": "A database interface definition for communication between R and relational database management systems.  All classes in this package are virtual and need to be extended by the various R/DBMS implementations.",
+        "usage": "Used for communication between R and relational database management systems."
     },
     "wk": {
         "version": "0.9.4",
-        "description": "Provides a minimal R and C++ API for parsing well-known binary and well-known text representation of geometries to and from R-native formats. Well-known binary is compact and fast to parse; well-known text is human-readable and is useful for writing tests. These formats are useful in R only if the information they contain can be accessed in R, for which high-performance functions are provided here."
+        "description": "Provides a minimal R and C++ API for parsing well-known binary and well-known text representation of geometries to and from R-native formats. Well-known binary is compact and fast to parse; well-known text is human-readable and is useful for writing tests. These formats are useful in R only if the information they contain can be accessed in R, for which high-performance functions are provided here.",
+        "usage": "Used for parsing well-known binary and text representations of geometries."
     },
     "xfun": {
         "version": "0.51",
-        "description": "Miscellaneous functions commonly used in other packages maintained by 'Yihui Xie'."
+        "description": "Miscellaneous functions commonly used in other packages maintained by 'Yihui Xie'.",
+        "usage": "Used for miscellaneous functions."
     },
     "desc": {
         "version": "1.4.3",
-        "description": "Tools to read, write, create, and manipulate DESCRIPTION files.  It is intended for packages that create or manipulate other packages."
+        "description": "Tools to read, write, create, and manipulate DESCRIPTION files.  It is intended for packages that create or manipulate other packages.",
+        "usage": "Used for working with DESCRIPTION files."
     },
     "jquerylib": {
         "version": "0.1.4",
-        "description": "Obtain any major version of 'jQuery' (<https://code.jquery.com/>) and use it in any webpage generated by 'htmltools' (e.g. 'shiny', 'htmlwidgets', and 'rmarkdown'). Most R users don't need to use this package directly, but other R packages (e.g. 'shiny', 'rmarkdown', etc.) depend on this package to avoid bundling redundant copies of 'jQuery'."
+        "description": "Obtain any major version of 'jQuery' (<https://code.jquery.com/>) and use it in any webpage generated by 'htmltools' (e.g. 'shiny', 'htmlwidgets', and 'rmarkdown'). Most R users don't need to use this package directly, but other R packages (e.g. 'shiny', 'rmarkdown', etc.) depend on this package to avoid bundling redundant copies of 'jQuery'.",
+        "usage": "Used for obtaining and using jQuery in webpages generated by htmltools."
     },
     "curl": {
         "version": "6.2.1",
-        "description": "Bindings to 'libcurl' <https://curl.se/libcurl/> for performing fully configurable HTTP/FTP requests where responses can be processed in memory, on disk, or streaming via the callback or connection interfaces. Some knowledge of 'libcurl' is recommended; for a more-user-friendly web client see the 'httr2' package which builds on this package with http specific tools and logic."
+        "description": "Bindings to 'libcurl' <https://curl.se/libcurl/> for performing fully configurable HTTP/FTP requests where responses can be processed in memory, on disk, or streaming via the callback or connection interfaces. Some knowledge of 'libcurl' is recommended; for a more-user-friendly web client see the 'httr2' package which builds on this package with http specific tools and logic.",
+        "usage": "Used for performing HTTP/FTP requests."
     },
     "utf8": {
         "version": "1.2.4",
-        "description": "Process and print 'UTF-8' encoded international text (Unicode). Input, validate, normalize, encode, format, and display."
+        "description": "Process and print 'UTF-8' encoded international text (Unicode). Input, validate, normalize, encode, format, and display.",
+        "usage": "Used for processing and printing UTF-8 encoded text."
     },
     "systemfonts": {
         "version": "1.2.1",
-        "description": "Provides system native access to the font catalogue. As font handling varies between systems it is difficult to correctly locate installed fonts across different operating systems. The 'systemfonts' package provides bindings to the native libraries on Windows, macOS and Linux for finding font files that can then be used further by e.g. graphic devices. The main use is intended to be from compiled code but 'systemfonts' also provides access from R."
+        "description": "Provides system native access to the font catalogue. As font handling varies between systems it is difficult to correctly locate installed fonts across different operating systems. The 'systemfonts' package provides bindings to the native libraries on Windows, macOS and Linux for finding font files that can then be used further by e.g. graphic devices. The main use is intended to be from compiled code but 'systemfonts' also provides access from R.",
+        "usage": "Used for accessing the system font catalogue."
     },
     "bit": {
         "version": "4.6.0",
-        "description": "Provided are classes for boolean and skewed boolean vectors, fast boolean methods, fast unique and non-unique integer sorting, fast set operations on sorted and unsorted sets of integers, and foundations for ff (range index, compression, chunked processing)."
+        "description": "Provided are classes for boolean and skewed boolean vectors, fast boolean methods, fast unique and non-unique integer sorting, fast set operations on sorted and unsorted sets of integers, and foundations for ff (range index, compression, chunked processing).",
+        "usage": "Used for working with boolean vectors and fast set operations."
     },
     "tidyr": {
         "version": "1.3.1",
-        "description": "Tools to help to create tidy data, where each column is a variable, each row is an observation, and each cell contains a single value.  'tidyr' contains tools for changing the shape (pivoting) and hierarchy (nesting and 'unnesting') of a dataset, turning deeply nested lists into rectangular data frames ('rectangling'), and extracting values out of string columns. It also includes tools for working with missing values (both implicit and explicit)."
+        "description": "Tools to help to create tidy data, where each column is a variable, each row is an observation, and each cell contains a single value.  'tidyr' contains tools for changing the shape (pivoting) and hierarchy (nesting and 'unnesting') of a dataset, turning deeply nested lists into rectangular data frames ('rectangling'), and extracting values out of string columns. It also includes tools for working with missing values (both implicit and explicit).",
+        "usage": "Used for creating tidy data."
     },
     "terra": {
         "version": "1.8-29",
-        "description": "Methods for spatial data analysis with vector (points, lines, polygons) and raster (grid) data. Methods for vector data include geometric operations such as intersect and buffer. Raster methods include local, focal, global, zonal and geometric operations. The predict and interpolate methods facilitate the use of regression type (interpolation, machine learning) models for spatial prediction, including with satellite remote sensing data. Processing of very large files is supported. See the manual and tutorials on <https://rspatial.org/> to get started. 'terra' replaces the 'raster' package ('terra' can do more, and it is faster and easier to use)."
+        "description": "Methods for spatial data analysis with vector (points, lines, polygons) and raster (grid) data. Methods for vector data include geometric operations such as intersect and buffer. Raster methods include local, focal, global, zonal and geometric operations. The predict and interpolate methods facilitate the use of regression type (interpolation, machine learning) models for spatial prediction, including with satellite remote sensing data. Processing of very large files is supported. See the manual and tutorials on <https://rspatial.org/> to get started. 'terra' replaces the 'raster' package ('terra' can do more, and it is faster and easier to use).",
+        "usage": "Used for spatial data analysis."
     },
     "praise": {
         "version": "1.0.0",
-        "description": "Build friendly R packages that praise their users if they have done something good, or they just need it to feel better."
+        "description": "Build friendly R packages that praise their users if they have done something good, or they just need it to feel better.",
+        "usage": "Used for building friendly R packages."
     },
     "vctrs": {
         "version": "0.6.5",
-        "description": "Defines new notions of prototype and size that are used to provide tools for consistent and well-founded type-coercion and size-recycling, and are in turn connected to ideas of type- and size-stability useful for analysing function interfaces."
+        "description": "Defines new notions of prototype and size that are used to provide tools for consistent and well-founded type-coercion and size-recycling, and are in turn connected to ideas of type- and size-stability useful for analysing function interfaces.",
+        "usage": "Used for type-coercion and size-recycling."
     },
     "viridisLite": {
         "version": "0.4.2",
-        "description": "Color maps designed to improve graph readability for readers with common forms of color blindness and/or color vision deficiency. The color maps are also perceptually-uniform, both in regular form and also when converted to black-and-white for printing. This is the 'lite' version of the 'viridis' package that also contains 'ggplot2' bindings for discrete and continuous color and fill scales and can be found at <https://cran.r-project.org/package=viridis>."
+        "description": "Color maps designed to improve graph readability for readers with common forms of color blindness and/or color vision deficiency. The color maps are also perceptually-uniform, both in regular form and also when converted to black-and-white for printing. This is the 'lite' version of the 'viridis' package that also contains 'ggplot2' bindings for discrete and continuous color and fill scales and can be found at <https://cran.r-project.org/package=viridis>.",
+        "usage": "Used for color maps that improve graph readability."
     },
     "sf": {
         "version": "1.0-19",
-        "description": "Support for simple features, a standardized way to encode spatial vector data. Binds to 'GDAL' for reading and writing data, to 'GEOS' for geometrical operations, and to 'PROJ' for projection conversions and datum transformations. Uses by default the 's2' package for spherical geometry operations on ellipsoidal (long/lat) coordinates."
+        "description": "Support for simple features, a standardized way to encode spatial vector data. Binds to 'GDAL' for reading and writing data, to 'GEOS' for geometrical operations, and to 'PROJ' for projection conversions and datum transformations. Uses by default the 's2' package for spherical geometry operations on ellipsoidal (long/lat) coordinates.",
+        "usage": "Used for encoding spatial vector data."
     },
     "remotes": {
         "version": "2.5.0",
-        "description": "Download and install R packages stored in 'GitHub', 'GitLab', 'Bitbucket', 'Bioconductor', or plain 'subversion' or 'git' repositories.  This package provides the 'install_*' functions in 'devtools'. Indeed most of the code was copied over from 'devtools'."
+        "description": "Download and install R packages stored in 'GitHub', 'GitLab', 'Bitbucket', 'Bioconductor', or plain 'subversion' or 'git' repositories.  This package provides the 'install_*' functions in 'devtools'. Indeed most of the code was copied over from 'devtools'.",
+        "usage": "Used for downloading and installing R packages from various repositories."
     },
     "selectr": {
         "version": "0.4-2",
-        "description": "Translates a CSS3 selector into an equivalent XPath expression. This allows us to use CSS selectors when working with the XML package as it can only evaluate XPath expressions. Also provided are convenience functions useful for using CSS selectors on XML nodes. This package is a port of the Python package 'cssselect' (<https://cssselect.readthedocs.io/>)."
+        "description": "Translates a CSS3 selector into an equivalent XPath expression. This allows us to use CSS selectors when working with the XML package as it can only evaluate XPath expressions. Also provided are convenience functions useful for using CSS selectors on XML nodes. This package is a port of the Python package 'cssselect' (<https://cssselect.readthedocs.io/>).",
+        "usage": "Used for translating CSS3 selectors into XPath expressions."
     },
     "lifecycle": {
         "version": "1.0.4",
-        "description": "Manage the life cycle of your exported functions with shared conventions, documentation badges, and user-friendly deprecation warnings."
+        "description": "Manage the life cycle of your exported functions with shared conventions, documentation badges, and user-friendly deprecation warnings.",
+        "usage": "Used for managing the life cycle of exported functions."
     },
     "waldo": {
         "version": "0.6.1",
-        "description": "Compare complex R objects and reveal the key differences. Designed particularly for use in testing packages where being able to quickly isolate key differences makes understanding test failures much easier."
+        "description": "Compare complex R objects and reveal the key differences. Designed particularly for use in testing packages where being able to quickly isolate key differences makes understanding test failures much easier.",
+        "usage": "Used for comparing complex R objects."
     },
     "memoise": {
         "version": "2.0.1",
-        "description": "Cache the results of a function so that when you call it again with the same arguments it returns the previously computed value."
+        "description": "Cache the results of a function so that when you call it again with the same arguments it returns the previously computed value.",
+        "usage": "Used for caching function results."
     },
     "later": {
         "version": "1.4.1",
-        "description": "Executes arbitrary R or C functions some time after the current time, after the R execution stack has emptied. The functions are scheduled in an event loop."
+        "description": "Executes arbitrary R or C functions some time after the current time, after the R execution stack has emptied. The functions are scheduled in an event loop.",
+        "usage": "Used for scheduling functions to run later."
     },
     "glue": {
         "version": "1.8.0",
-        "description": "An implementation of interpreted string literals, inspired by Python's Literal String Interpolation <https://www.python.org/dev/peps/pep-0498/> and Docstrings <https://www.python.org/dev/peps/pep-0257/> and Julia's Triple-Quoted String Literals <https://docs.julialang.org/en/v1.3/manual/strings/#Triple-Quoted-String-Literals-1>."
+        "description": "An implementation of interpreted string literals, inspired by Python's Literal String Interpolation <https://www.python.org/dev/peps/pep-0498/> and Docstrings <https://www.python.org/dev/peps/pep-0257/> and Julia's Triple-Quoted String Literals <https://docs.julialang.org/en/v1.3/manual/strings/#Triple-Quoted-String-Literals-1>.",
+        "usage": "Used for interpreted string literals."
     },
     "jsonlite": {
         "version": "1.9.1",
-        "description": "A reasonably fast JSON parser and generator, optimized for statistical data and the web. Offers simple, flexible tools for working with JSON in R, and is particularly powerful for building pipelines and interacting with a web API. The implementation is based on the mapping described in the vignette (Ooms, 2014). In addition to converting JSON data from/to R objects, 'jsonlite' contains functions to stream, validate, and prettify JSON data. The unit tests included with the package verify that all edge cases are encoded and decoded consistently for use with dynamic data in systems and applications."
+        "description": "A reasonably fast JSON parser and generator, optimized for statistical data and the web. Offers simple, flexible tools for working with JSON in R, and is particularly powerful for building pipelines and interacting with a web API. The implementation is based on the mapping described in the vignette (Ooms, 2014). In addition to converting JSON data from/to R objects, 'jsonlite' contains functions to stream, validate, and prettify JSON data. The unit tests included with the package verify that all edge cases are encoded and decoded consistently for use with dynamic data in systems and applications.",
+        "usage": "Used for working with JSON data."
     },
     "brio": {
         "version": "1.1.5",
-        "description": "Functions to handle basic input output, these functions always read and write UTF-8 (8-bit Unicode Transformation Format) files and provide more explicit control over line endings."
+        "description": "Functions to handle basic input output, these functions always read and write UTF-8 (8-bit Unicode Transformation Format) files and provide more explicit control over line endings.",
+        "usage": "Used for handling basic input and output."
     },
     "uuid": {
         "version": "1.2-1",
-        "description": "Tools for generating and handling of UUIDs (Universally Unique Identifiers)."
+        "description": "Tools for generating and handling of UUIDs (Universally Unique Identifiers).",
+        "usage": "Used for generating and handling UUIDs."
     },
     "rstudioapi": {
         "version": "0.17.1",
-        "description": "Access the RStudio API (if available) and provide informative error messages when it's not."
+        "description": "Access the RStudio API (if available) and provide informative error messages when it's not.",
+        "usage": "Used for accessing the RStudio API."
     },
     "htmlwidgets": {
         "version": "1.6.4",
-        "description": "A framework for creating HTML widgets that render in various contexts including the R console, 'R Markdown' documents, and 'Shiny' web applications."
+        "description": "A framework for creating HTML widgets that render in various contexts including the R console, 'R Markdown' documents, and 'Shiny' web applications.",
+        "usage": "Used for creating HTML widgets."
     },
     "permute": {
         "version": "0.9-7",
-        "description": "A set of restricted permutation designs for freely exchangeable, line transects (time series), and spatial grid designs plus permutation of blocks (groups of samples) is provided. 'permute' also allows split-plot designs, in which the whole-plots or split-plots or both can be freely-exchangeable or one of the restricted designs. The 'permute' package is modelled after the permutation schemes of 'Canoco 3.1' (and later) by Cajo ter Braak."
+        "description": "A set of restricted permutation designs for freely exchangeable, line transects (time series), and spatial grid designs plus permutation of blocks (groups of samples) is provided. 'permute' also allows split-plot designs, in which the whole-plots or split-plots or both can be freely-exchangeable or one of the restricted designs. The 'permute' package is modelled after the permutation schemes of 'Canoco 3.1' (and later) by Cajo ter Braak.",
+        "usage": "Used for restricted permutation designs."
     },
     "progress": {
         "version": "1.2.3",
-        "description": "Configurable Progress bars, they may include percentage, elapsed time, and/or the estimated completion time. They work in terminals, in 'Emacs' 'ESS', 'RStudio', 'Windows' 'Rgui' and the 'macOS' 'R.app'. The package also provides a 'C++' 'API', that works with or without 'Rcpp'."
+        "description": "Configurable Progress bars, they may include percentage, elapsed time, and/or the estimated completion time. They work in terminals, in 'Emacs' 'ESS', 'RStudio', 'Windows' 'Rgui' and the 'macOS' 'R.app'. The package also provides a 'C++' 'API', that works with or without 'Rcpp'.",
+        "usage": "Used for creating configurable progress bars."
     },
     "plyr": {
         "version": "1.8.9",
-        "description": "A set of tools that solves a common set of problems: you need to break a big problem down into manageable pieces, operate on each piece and then put all the pieces back together.  For example, you might want to fit a model to each spatial location or time point in your study, summarise data by panels or collapse high-dimensional arrays to simpler summary statistics. The development of 'plyr' has been generously supported by 'Becton Dickinson'."
+        "description": "A set of tools that solves a common set of problems: you need to break a big problem down into manageable pieces, operate on each piece and then put all the pieces back together.  For example, you might want to fit a model to each spatial location or time point in your study, summarise data by panels or collapse high-dimensional arrays to simpler summary statistics. The development of 'plyr' has been generously supported by 'Becton Dickinson'.",
+        "usage": "Used for breaking down and operating on big problems."
     },
     "TraMineRextras": {
         "version": "0.6.8",
-        "description": "Collection of ancillary functions and utilities to be used in conjunction with the 'TraMineR' package for sequence data exploration. Includes, among others, specific functions such as state survival plots, position-wise group-typical states, dynamic sequence indicators, and dissimilarities between event sequences. Also includes contributions by non-members of the TraMineR team such as methods for polyadic data and for the comparison of groups of sequences."
+        "description": "Collection of ancillary functions and utilities to be used in conjunction with the 'TraMineR' package for sequence data exploration. Includes, among others, specific functions such as state survival plots, position-wise group-typical states, dynamic sequence indicators, and dissimilarities between event sequences. Also includes contributions by non-members of the TraMineR team such as methods for polyadic data and for the comparison of groups of sequences.",
+        "usage": "Used for ancillary functions and utilities for sequence data exploration."
     },
     "askpass": {
         "version": "1.2.1",
-        "description": "Cross-platform utilities for prompting the user for credentials or a passphrase, for example to authenticate with a server or read a protected key. Includes native programs for MacOS and Windows, hence no 'tcltk' is required. Password entry can be invoked in two different ways: directly from R via the askpass() function, or indirectly as password-entry back-end for 'ssh-agent' or 'git-credential' via the SSH_ASKPASS and GIT_ASKPASS environment variables. Thereby the user can be prompted for credentials or a passphrase if needed when R calls out to git or ssh."
+        "description": "Cross-platform utilities for prompting the user for credentials or a passphrase, for example to authenticate with a server or read a protected key. Includes native programs for MacOS and Windows, hence no 'tcltk' is required. Password entry can be invoked in two different ways: directly from R via the askpass() function, or indirectly as password-entry back-end for 'ssh-agent' or 'git-credential' via the SSH_ASKPASS and GIT_ASKPASS environment variables. Thereby the user can be prompted for credentials or a passphrase if needed when R calls out to git or ssh.",
+        "usage": "Used for prompting the user for credentials or a passphrase."
     },
     "blob": {
         "version": "1.2.4",
-        "description": "R's raw vector is useful for storing a single binary object. What if you want to put a vector of them in a data frame? The 'blob' package provides the blob object, a list of raw vectors, suitable for use as a column in data frame."
+        "description": "R's raw vector is useful for storing a single binary object. What if you want to put a vector of them in a data frame? The 'blob' package provides the blob object, a list of raw vectors, suitable for use as a column in data frame.",
+        "usage": "Used for storing binary objects in data frames."
     },
     "crosstalk": {
         "version": "1.2.1",
-        "description": "Provides building blocks for allowing HTML widgets to communicate with each other, with Shiny or without (i.e. static .html files). Currently supports linked brushing and filtering."
+        "description": "Provides building blocks for allowing HTML widgets to communicate with each other, with Shiny or without (i.e. static .html files). Currently supports linked brushing and filtering.",
+        "usage": "Used for allowing HTML widgets to communicate with each other."
     },
     "vegan": {
         "version": "2.6-10",
-        "description": "Ordination methods, diversity analysis and other functions for community and vegetation ecologists."
+        "description": "Ordination methods, diversity analysis and other functions for community and vegetation ecologists.",
+        "usage": "Used for ordination methods and diversity analysis."
     },
     "callr": {
         "version": "3.7.6",
-        "description": "It is sometimes useful to perform a computation in a separate R process, without affecting the current R process at all.  This packages does exactly that."
+        "description": "It is sometimes useful to perform a computation in a separate R process, without affecting the current R process at all.  This packages does exactly that.",
+        "usage": "Used for performing computations in a separate R process."
     },
     "crayon": {
         "version": "1.5.3",
-        "description": "The crayon package is now superseded. Please use the 'cli' package for new projects.  Colored terminal output on terminals that support 'ANSI' color and highlight codes. It also works in 'Emacs' 'ESS'. 'ANSI' color support is automatically detected. Colors and highlighting can be combined and nested. New styles can also be created easily.  This package was inspired by the 'chalk' 'JavaScript' project."
+        "description": "The crayon package is now superseded. Please use the 'cli' package for new projects.  Colored terminal output on terminals that support 'ANSI' color and highlight codes. It also works in 'Emacs' 'ESS'. 'ANSI' color support is automatically detected. Colors and highlighting can be combined and nested. New styles can also be created easily.  This package was inspired by the 'chalk' 'JavaScript' project.",
+        "usage": "Used for colored terminal output."
     },
     "base64enc": {
         "version": "0.1-3",
-        "description": "This package provides tools for handling base64 encoding. It is more flexible than the orphaned base64 package."
+        "description": "This package provides tools for handling base64 encoding. It is more flexible than the orphaned base64 package.",
+        "usage": "Used for handling base64 encoding."
     },
     "R6": {
         "version": "2.6.1",
-        "description": "Creates classes with reference semantics, similar to R's built-in reference classes. Compared to reference classes, R6 classes are simpler and lighter-weight, and they are not built on S4 classes so they do not require the methods package. These classes allow public and private members, and they support inheritance, even when the classes are defined in different packages."
+        "description": "Creates classes with reference semantics, similar to R's built-in reference classes. Compared to reference classes, R6 classes are simpler and lighter-weight, and they are not built on S4 classes so they do not require the methods package. These classes allow public and private members, and they support inheritance, even when the classes are defined in different packages.",
+        "usage": "Used for creating classes with reference semantics."
     },
     "cli": {
         "version": "3.6.4",
-        "description": "A suite of tools to build attractive command line interfaces ('CLIs'), from semantic elements: headings, lists, alerts, paragraphs, etc. Supports custom themes via a 'CSS'-like language. It also contains a number of lower level 'CLI' elements: rules, boxes, trees, and 'Unicode' symbols with 'ASCII' alternatives. It support ANSI colors and text styles as well."
+        "description": "A suite of tools to build attractive command line interfaces ('CLIs'), from semantic elements: headings, lists, alerts, paragraphs, etc. Supports custom themes via a 'CSS'-like language. It also contains a number of lower level 'CLI' elements: rules, boxes, trees, and 'Unicode' symbols with 'ASCII' alternatives. It support ANSI colors and text styles as well.",
+        "usage": "Used for building command line interfaces."
     },
     "rlang": {
         "version": "1.1.5",
-        "description": "A toolbox for working with base types, core R features like the condition system, and core 'Tidyverse' features like tidy evaluation."
+        "description": "A toolbox for working with base types, core R features like the condition system, and core 'Tidyverse' features like tidy evaluation.",
+        "usage": "Used for working with base types and core R features."
     },
     "httr": {
         "version": "1.4.7",
-        "description": "Useful tools for working with HTTP organised by HTTP verbs (GET(), POST(), etc). Configuration functions make it easy to control additional request components (authenticate(), add_headers() and so on)."
+        "description": "Useful tools for working with HTTP organised by HTTP verbs (GET(), POST(), etc). Configuration functions make it easy to control additional request components (authenticate(), add_headers() and so on).",
+        "usage": "Used for working with HTTP requests."
     },
     "feather": {
         "version": "0.3.5",
-        "description": "Read and write feather files, a lightweight binary columnar data store designed for maximum speed."
+        "description": "Read and write feather files, a lightweight binary columnar data store designed for maximum speed.",
+        "usage": "Used for reading and writing feather files."
     },
     "tigris": {
         "version": "2.1",
-        "description": "Download TIGER/Line shapefiles from the United States Census Bureau (<https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html>) and load into R as 'sf' objects."
+        "description": "Download TIGER/Line shapefiles from the United States Census Bureau (<https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html>) and load into R as 'sf' objects.",
+        "usage": "Used for downloading and loading TIGER/Line shapefiles."
     },
     "ggplot2": {
         "version": "3.5.1",
-        "description": "A system for 'declaratively' creating graphics, based on \"The Grammar of Graphics\". You provide the data, tell 'ggplot2' how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details."
+        "description": "A system for 'declaratively' creating graphics, based on \"The Grammar of Graphics\". You provide the data, tell 'ggplot2' how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details.",
+        "usage": "Used for creating graphics based on the Grammar of Graphics."
     },
     "haven": {
         "version": "2.5.4",
-        "description": "Import foreign statistical formats into R via the embedded 'ReadStat' C library, <https://github.com/WizardMac/ReadStat>."
+        "description": "Import foreign statistical formats into R via the embedded 'ReadStat' C library, <https://github.com/WizardMac/ReadStat>.",
+        "usage": "Used for importing foreign statistical formats into R."
     },
     "stringr": {
         "version": "1.5.1",
-        "description": "A consistent, simple and easy to use set of wrappers around the fantastic 'stringi' package. All function and argument names (and positions) are consistent, all functions deal with \"NA\"'s and zero length vectors in the same way, and the output from one function is easy to feed into the input of another."
+        "description": "A consistent, simple and easy to use set of wrappers around the fantastic 'stringi' package. All function and argument names (and positions) are consistent, all functions deal with \"NA\"'s and zero length vectors in the same way, and the output from one function is easy to feed into the input of another.",
+        "usage": "Used for working with strings."
     },
     "magrittr": {
         "version": "2.0.3",
-        "description": "Provides a mechanism for chaining commands with a new forward-pipe operator, %>%. This operator will forward a value, or the result of an expression, into the next function call/expression. There is flexible support for the type of right-hand side expressions. For more information, see package vignette.  To quote Rene Magritte, \"Ceci n'est pas un pipe.\""
+        "description": "Provides a mechanism for chaining commands with a new forward-pipe operator, %>%. This operator will forward a value, or the result of an expression, into the next function call/expression. There is flexible support for the type of right-hand side expressions. For more information, see package vignette.  To quote Rene Magritte, \"Ceci n'est pas un pipe.\"",
+        "usage": "Used for chaining commands with a forward-pipe operator."
     },
     "ids": {
         "version": "1.0.1",
-        "description": "Generate random or human readable and pronounceable identifiers."
+        "description": "Generate random or human readable and pronounceable identifiers.",
+        "usage": "Used for generating random or human readable identifiers."
     },
     "scales": {
         "version": "1.3.0",
-        "description": "Graphical scales map data to aesthetics, and provide methods for automatically determining breaks and labels for axes and legends."
+        "description": "Graphical scales map data to aesthetics, and provide methods for automatically determining breaks and labels for axes and legends.",
+        "usage": "Used for mapping data to aesthetics."
     },
     "fs": {
         "version": "1.6.5",
-        "description": "A cross-platform interface to file system operations, built on top of the 'libuv' C library."
+        "description": "A cross-platform interface to file system operations, built on top of the 'libuv' C library.",
+        "usage": "Used for file system operations."
+    },
+    "argparse": {
+        "version": "2.2.5",
+        "description": "A command line parser to be used with 'Rscript' to write \"#!\" shebang scripts that gracefully accept positional and optional arguments and automatically generate usage.",
+        "usage": "Used for command line parsing."
     },
     "rematch": {
         "version": "2.0.0",
-        "description": "A small wrapper on 'regexpr' to extract the matches and captured groups from the match of a regular expression to a character vector."
+        "description": "A small wrapper on 'regexpr' to extract the matches and captured groups from the match of a regular expression to a character vector.",
+        "usage": "Used for extracting matches and captured groups from regular expressions."
     },
     "raster": {
         "version": "3.6-31",
-        "description": "Reading, writing, manipulating, analyzing and modeling of spatial data. This package has been superseded by the \"terra\" package <https://CRAN.R-project.org/package=terra>."
+        "description": "Reading, writing, manipulating, analyzing and modeling of spatial data. This package has been superseded by the \"terra\" package <https://CRAN.R-project.org/package=terra>.",
+        "usage": "Used for working with spatial data."
     },
     "doParallel": {
         "version": "1.0.17",
-        "description": "Provides a parallel backend for the %dopar% function using the parallel package."
+        "description": "Provides a parallel backend for the %dopar% function using the parallel package.",
+        "usage": "Used for parallel computing."
     },
     "generics": {
         "version": "0.1.3",
-        "description": "In order to reduce potential package dependencies and conflicts, generics provides a number of commonly used S3 generics."
+        "description": "In order to reduce potential package dependencies and conflicts, generics provides a number of commonly used S3 generics.",
+        "usage": "Used for providing commonly used S3 generics."
     },
     "colorspace": {
         "version": "2.1-1",
-        "description": "Carries out mapping between assorted color spaces including RGB, HSV, HLS, CIEXYZ, CIELUV, HCL (polar CIELUV), CIELAB, and polar CIELAB."
+        "description": "Carries out mapping between assorted color spaces including RGB, HSV, HLS, CIEXYZ, CIELUV, HCL (polar CIELUV), CIELAB, and polar CIELAB.",
+        "usage": "Used for mapping between color spaces."
     },
     "Rcpp": {
         "version": "1.0.14",
-        "description": "The 'Rcpp' package provides R functions as well as C++ classes which offer a seamless integration of R and C++. Many R data types and objects can be mapped back and forth to C++ equivalents which facilitates both writing of new code as well as easier integration of third-party libraries. Documentation about 'Rcpp' is provided by several vignettes included in this package, via the 'Rcpp Gallery' site at <https://gallery.rcpp.org>, the paper by Eddelbuettel and Francois (2011, <doi:10.18637/jss.v040.i08>), the book by Eddelbuettel (2013, <doi:10.1007/978-1-4614-6868-4>) and the paper by Eddelbuettel and Balamuta (2018, <doi:10.1080/00031305.2017.1375990>); see 'citation(\"Rcpp\")' for details."
+        "description": "The 'Rcpp' package provides R functions as well as C++ classes which offer a seamless integration of R and C++. Many R data types and objects can be mapped back and forth to C++ equivalents which facilitates both writing of new code as well as easier integration of third-party libraries. Documentation about 'Rcpp' is provided by several vignettes included in this package, via the 'Rcpp Gallery' site at <https://gallery.rcpp.org>, the paper by Eddelbuettel and Francois (2011, <doi:10.18637/jss.v040.i08>), the book by Eddelbuettel (2013, <doi:10.1007/978-1-4614-6868-4>) and the paper by Eddelbuettel and Balamuta (2018, <doi:10.1080/00031305.2017.1375990>); see 'citation(\"Rcpp\")' for details.",
+        "usage": "Used for integrating R and C++."
     },
     "lazyeval": {
         "version": "0.2.2",
-        "description": "An alternative approach to non-standard evaluation using formulas. Provides a full implementation of LISP style 'quasiquotation', making it easier to generate code with other code."
+        "description": "An alternative approach to non-standard evaluation using formulas. Provides a full implementation of LISP style 'quasiquotation', making it easier to generate code with other code.",
+        "usage": "Used for non-standard evaluation using formulas."
     },
     "clipr": {
         "version": "0.8.0",
-        "description": "Simple utility functions to read from and write to the Windows, OS X, and X11 clipboards."
+        "description": "Simple utility functions to read from and write to the Windows, OS X, and X11 clipboards.",
+        "usage": "Used for reading from and writing to clipboards."
     },
     "tinytex": {
         "version": "0.56",
-        "description": "Helper functions to install and maintain the 'LaTeX' distribution named 'TinyTeX' (<https://yihui.org/tinytex/>), a lightweight, cross-platform, portable, and easy-to-maintain version of 'TeX Live'. This package also contains helper functions to compile 'LaTeX' documents, and install missing 'LaTeX' packages automatically."
+        "description": "Helper functions to install and maintain the 'LaTeX' distribution named 'TinyTeX' (<https://yihui.org/tinytex/>), a lightweight, cross-platform, portable, and easy-to-maintain version of 'TeX Live'. This package also contains helper functions to compile 'LaTeX' documents, and install missing 'LaTeX' packages automatically.",
+        "usage": "Used for installing and maintaining the TinyTeX distribution."
     },
     "cartography": {
         "version": "3.1.4",
-        "description": "Create and integrate maps in your R workflow. This package helps to design cartographic representations such as proportional symbols, choropleth, typology, flows or discontinuities maps. It also offers several features that improve the graphic presentation of maps, for instance, map palettes, layout elements (scale, north arrow, title...), labels or legends. See Giraud and Lambert (2017) <doi:10.1007/978-3-319-57336-6_13>."
+        "description": "Create and integrate maps in your R workflow. This package helps to design cartographic representations such as proportional symbols, choropleth, typology, flows or discontinuities maps. It also offers several features that improve the graphic presentation of maps, for instance, map palettes, layout elements (scale, north arrow, title...), labels or legends. See Giraud and Lambert (2017) <doi:10.1007/978-3-319-57336-6_13>.",
+        "usage": "Used for creating and integrating maps in R."
     },
     "sys": {
         "version": "3.4.3",
-        "description": "Drop-in replacements for the base system2() function with fine control and consistent behavior across platforms. Supports clean interruption, timeout, background tasks, and streaming STDIN / STDOUT / STDERR over binary or text connections. Arguments on Windows automatically get encoded and quoted to work on different locales."
+        "description": "Drop-in replacements for the base system2() function with fine control and consistent behavior across platforms. Supports clean interruption, timeout, background tasks, and streaming STDIN / STDOUT / STDERR over binary or text connections. Arguments on Windows automatically get encoded and quoted to work on different locales.",
+        "usage": "Used for system commands with fine control."
+    },
+    "findpython": {
+        "version": "1.0.9",
+        "description": "Package designed to find an acceptable python binary.",
+        "usage": "Used for finding an acceptable python binary."
     },
     "pkgconfig": {
         "version": "2.0.3",
-        "description": "Set configuration options on a per-package basis. Options set by a given package only apply to that package, other packages are unaffected."
+        "description": "Set configuration options on a per-package basis. Options set by a given package only apply to that package, other packages are unaffected.",
+        "usage": "Used for setting configuration options on a per-package basis."
     },
     "pkgbuild": {
         "version": "1.4.6",
-        "description": "Provides functions used to build R packages. Locates compilers needed to build R packages on various platforms and ensures the PATH is configured appropriately so R can use them."
+        "description": "Provides functions used to build R packages. Locates compilers needed to build R packages on various platforms and ensures the PATH is configured appropriately so R can use them.",
+        "usage": "Used for building R packages."
     },
     "leaflet.providers": {
         "version": "2.0.0",
-        "description": "Contains third-party map tile provider information from 'Leaflet.js', <https://github.com/leaflet-extras/leaflet-providers>, to be used with the 'leaflet' R package. Additionally, 'leaflet.providers' enables users to retrieve up-to-date provider information between package updates."
+        "description": "Contains third-party map tile provider information from 'Leaflet.js', <https://github.com/leaflet-extras/leaflet-providers>, to be used with the 'leaflet' R package. Additionally, 'leaflet.providers' enables users to retrieve up-to-date provider information between package updates.",
+        "usage": "Used for map tile provider information for the leaflet package."
     },
     "yaml": {
         "version": "2.3.10",
-        "description": "Implements the 'libyaml' 'YAML' 1.1 parser and emitter (<https://pyyaml.org/wiki/LibYAML>) for R."
+        "description": "Implements the 'libyaml' 'YAML' 1.1 parser and emitter (<https://pyyaml.org/wiki/LibYAML>) for R.",
+        "usage": "Used for parsing and emitting YAML."
     },
     "pkgload": {
         "version": "1.4.0",
-        "description": "Simulates the process of installing a package and then attaching it. This is a key part of the 'devtools' package as it allows you to rapidly iterate while developing a package."
+        "description": "Simulates the process of installing a package and then attaching it. This is a key part of the 'devtools' package as it allows you to rapidly iterate while developing a package.",
+        "usage": "Used for simulating the process of installing and attaching a package."
     },
     "png": {
         "version": "0.1-8",
-        "description": "This package provides an easy and simple way to read, write and display bitmap images stored in the PNG format. It can read and write both files and in-memory raw vectors."
+        "description": "This package provides an easy and simple way to read, write and display bitmap images stored in the PNG format. It can read and write both files and in-memory raw vectors.",
+        "usage": "Used for reading, writing, and displaying PNG images."
     },
     "labeling": {
         "version": "0.4.3",
-        "description": "Functions which provide a range of axis labeling algorithms."
+        "description": "Functions which provide a range of axis labeling algorithms.",
+        "usage": "Used for axis labeling algorithms."
     },
     "rex": {
         "version": "1.2.1",
-        "description": "A friendly interface for the construction of regular expressions."
+        "description": "A friendly interface for the construction of regular expressions.",
+        "usage": "Used for constructing regular expressions."
     },
     "readr": {
         "version": "2.1.5",
-        "description": "The goal of 'readr' is to provide a fast and friendly way to read rectangular data (like 'csv', 'tsv', and 'fwf').  It is designed to flexibly parse many types of data found in the wild, while still cleanly failing when data unexpectedly changes."
+        "description": "The goal of 'readr' is to provide a fast and friendly way to read rectangular data (like 'csv', 'tsv', and 'fwf').  It is designed to flexibly parse many types of data found in the wild, while still cleanly failing when data unexpectedly changes.",
+        "usage": "Used for reading rectangular data."
     },
     "googlesheets4": {
         "version": "1.1.1",
-        "description": "Interact with Google Sheets through the Sheets API v4 <https://developers.google.com/sheets/api>. \"API\" is an acronym for \"application programming interface\"; the Sheets API allows users to interact with Google Sheets programmatically, instead of via a web browser. The \"v4\" refers to the fact that the Sheets API is currently at version 4. This package can read and write both the metadata and the cell data in a Sheet."
+        "description": "Interact with Google Sheets through the Sheets API v4 <https://developers.google.com/sheets/api>. \"API\" is an acronym for \"application programming interface\"; the Sheets API allows users to interact with Google Sheets programmatically, instead of via a web browser. The \"v4\" refers to the fact that the Sheets API is currently at version 4. This package can read and write both the metadata and the cell data in a Sheet.",
+        "usage": "Used for interacting with Google Sheets."
     },
     "RColorBrewer": {
         "version": "1.1-3",
-        "description": "Provides color schemes for maps (and other graphics) designed by Cynthia Brewer as described at http://colorbrewer2.org."
+        "description": "Provides color schemes for maps (and other graphics) designed by Cynthia Brewer as described at http://colorbrewer2.org.",
+        "usage": "Used for color schemes for maps and graphics."
     },
     "openssl": {
         "version": "2.3.2",
-        "description": "Bindings to OpenSSL libssl and libcrypto, plus custom SSH key parsers. Supports RSA, DSA and EC curves P-256, P-384, P-521, and curve25519. Cryptographic signatures can either be created and verified manually or via x509 certificates. AES can be used in cbc, ctr or gcm mode for symmetric encryption; RSA for asymmetric (public key) encryption or EC for Diffie Hellman. High-level envelope functions combine RSA and AES for encrypting arbitrary sized data. Other utilities include key generators, hash functions (md5, sha1, sha256, etc), base64 encoder, a secure random number generator, and 'bignum' math methods for manually performing crypto calculations on large multibyte integers."
+        "description": "Bindings to OpenSSL libssl and libcrypto, plus custom SSH key parsers. Supports RSA, DSA and EC curves P-256, P-384, P-521, and curve25519. Cryptographic signatures can either be created and verified manually or via x509 certificates. AES can be used in cbc, ctr or gcm mode for symmetric encryption; RSA for asymmetric (public key) encryption or EC for Diffie Hellman. High-level envelope functions combine RSA and AES for encrypting arbitrary sized data. Other utilities include key generators, hash functions (md5, sha1, sha256, etc), base64 encoder, a secure random number generator, and 'bignum' math methods for manually performing crypto calculations on large multibyte integers.",
+        "usage": "Used for cryptographic operations."
     },
     "stringi": {
         "version": "1.8.4",
-        "description": "A collection of character string/text/natural language processing tools for pattern searching (e.g., with 'Java'-like regular expressions or the 'Unicode' collation algorithm), random string generation, case mapping, string transliteration, concatenation, sorting, padding, wrapping, Unicode normalisation, date-time formatting and parsing, and many more. They are fast, consistent, convenient, and - thanks to 'ICU' (International Components for Unicode) - portable across all locales and platforms. Documentation about 'stringi' is provided via its website at <https://stringi.gagolewski.com/> and the paper by Gagolewski (2022, <doi:10.18637/jss.v103.i02>)."
+        "description": "A collection of character string/text/natural language processing tools for pattern searching (e.g., with 'Java'-like regular expressions or the 'Unicode' collation algorithm), random string generation, case mapping, string transliteration, concatenation, sorting, padding, wrapping, Unicode normalisation, date-time formatting and parsing, and many more. They are fast, consistent, convenient, and - thanks to 'ICU' (International Components for Unicode) - portable across all locales and platforms. Documentation about 'stringi' is provided via its website at <https://stringi.gagolewski.com/> and the paper by Gagolewski (2022, <doi:10.18637/jss.v103.i02>).",
+        "usage": "Used for character string and text processing."
     },
     "mockr": {
         "version": "0.2.1",
-        "description": "Provides a means to mock a package function, i.e., temporarily substitute it for testing. Designed as a drop-in replacement for the now deprecated 'testthat::with_mock()' and 'testthat::local_mock()'."
+        "description": "Provides a means to mock a package function, i.e., temporarily substitute it for testing. Designed as a drop-in replacement for the now deprecated 'testthat::with_mock()' and 'testthat::local_mock()'.",
+        "usage": "Used for mocking package functions."
     },
     "sp": {
         "version": "2.2-0",
-        "description": "Classes and methods for spatial data; the classes document where the spatial location information resides, for 2D or 3D data. Utility functions are provided, e.g. for plotting data as maps, spatial selection, as well as methods for retrieving coordinates, for subsetting, print, summary, etc. From this version, 'rgdal', 'maptools', and 'rgeos' are no longer used at all, see <https://r-spatial.org/r/2023/05/15/evolution4.html> for details."
+        "description": "Classes and methods for spatial data; the classes document where the spatial location information resides, for 2D or 3D data. Utility functions are provided, e.g. for plotting data as maps, spatial selection, as well as methods for retrieving coordinates, for subsetting, print, summary, etc. From this version, 'rgdal', 'maptools', and 'rgeos' are no longer used at all, see <https://r-spatial.org/r/2023/05/15/evolution4.html> for details.",
+        "usage": "Used for working with spatial data."
     },
     "tibble": {
         "version": "3.2.1",
-        "description": "Provides a 'tbl_df' class (the 'tibble') with stricter checking and better formatting than the traditional data frame."
+        "description": "Provides a 'tbl_df' class (the 'tibble') with stricter checking and better formatting than the traditional data frame.",
+        "usage": "Used for creating tibbles."
     },
     "ragg": {
         "version": "1.3.3",
-        "description": "Anti-Grain Geometry (AGG) is a high-quality and high-performance 2D drawing library. The 'ragg' package provides a set of graphic devices based on AGG to use as alternative to the raster devices provided through the 'grDevices' package."
+        "description": "Anti-Grain Geometry (AGG) is a high-quality and high-performance 2D drawing library. The 'ragg' package provides a set of graphic devices based on AGG to use as alternative to the raster devices provided through the 'grDevices' package.",
+        "usage": "Used for high-quality 2D drawing."
     },
     "munsell": {
         "version": "0.5.1",
-        "description": "Provides easy access to, and manipulation of, the Munsell colours. Provides a mapping between Munsell's original notation (e.g. \"5R 5/10\") and hexadecimal strings suitable for use directly in R graphics. Also provides utilities to explore slices through the Munsell colour tree, to transform Munsell colours and display colour palettes."
+        "description": "Provides easy access to, and manipulation of, the Munsell colours. Provides a mapping between Munsell's original notation (e.g. \"5R 5/10\") and hexadecimal strings suitable for use directly in R graphics. Also provides utilities to explore slices through the Munsell colour tree, to transform Munsell colours and display colour palettes.",
+        "usage": "Used for working with Munsell colors."
     },
     "htmltools": {
         "version": "0.5.8.1",
-        "description": "Tools for HTML generation and output."
+        "description": "Tools for HTML generation and output.",
+        "usage": "Used for HTML generation and output."
     },
     "rematch2": {
         "version": "2.1.2",
-        "description": "Wrappers on 'regexpr' and 'gregexpr' to return the match results in tidy data frames."
+        "description": "Wrappers on 'regexpr' and 'gregexpr' to return the match results in tidy data frames.",
+        "usage": "Used for returning match results in tidy data frames."
     },
     "units": {
         "version": "0.8-7",
-        "description": "Support for measurement units in R vectors, matrices and arrays: automatic propagation, conversion, derivation and simplification of units; raising errors in case of unit incompatibility. Compatible with the POSIXct, Date and difftime classes. Uses the UNIDATA udunits library and unit database for unit compatibility checking and conversion. Documentation about 'units' is provided in the paper by Pebesma, Mailund & Hiebert (2016, <doi:10.32614/RJ-2016-061>), included in this package as a vignette; see 'citation(\"units\")' for details."
+        "description": "Support for measurement units in R vectors, matrices and arrays: automatic propagation, conversion, derivation and simplification of units; raising errors in case of unit incompatibility. Compatible with the POSIXct, Date and difftime classes. Uses the UNIDATA udunits library and unit database for unit compatibility checking and conversion. Documentation about 'units' is provided in the paper by Pebesma, Mailund & Hiebert (2016, <doi:10.32614/RJ-2016-061>), included in this package as a vignette; see 'citation(\"units\")' for details.",
+        "usage": "Used for working with measurement units."
     },
     "purrr": {
         "version": "1.0.4",
-        "description": "A complete and consistent functional programming toolkit for R."
+        "description": "A complete and consistent functional programming toolkit for R.",
+        "usage": "Used for functional programming in R."
     },
     "iterators": {
         "version": "1.0.14",
-        "description": "Support for iterators, which allow a programmer to traverse through all the elements of a vector, list, or other collection of data."
+        "description": "Support for iterators, which allow a programmer to traverse through all the elements of a vector, list, or other collection of data.",
+        "usage": "Used for traversing elements of a collection."
     },
     "fansi": {
         "version": "1.0.6",
-        "description": "Counterparts to R string manipulation functions that account for the effects of ANSI text formatting control sequences."
+        "description": "Counterparts to R string manipulation functions that account for the effects of ANSI text formatting control sequences.",
+        "usage": "Used for string manipulation with ANSI text formatting."
     },
     "sass": {
         "version": "0.4.9",
-        "description": "An 'SCSS' compiler, powered by the 'LibSass' library. With this, R developers can use variables, inheritance, and functions to generate dynamic style sheets. The package uses the 'Sass CSS' extension language, which is stable, powerful, and CSS compatible."
+        "description": "An 'SCSS' compiler, powered by the 'LibSass' library. With this, R developers can use variables, inheritance, and functions to generate dynamic style sheets. The package uses the 'Sass CSS' extension language, which is stable, powerful, and CSS compatible.",
+        "usage": "Used for compiling SCSS."
     },
     "foreach": {
         "version": "1.5.2",
-        "description": "Support for the foreach looping construct.  Foreach is an idiom that allows for iterating over elements in a collection, without the use of an explicit loop counter.  This package in particular is intended to be used for its return value, rather than for its side effects.  In that sense, it is similar to the standard lapply function, but doesn't require the evaluation of a function.  Using foreach without side effects also facilitates executing the loop in parallel."
+        "description": "Support for the foreach looping construct.  Foreach is an idiom that allows for iterating over elements in a collection, without the use of an explicit loop counter.  This package in particular is intended to be used for its return value, rather than for its side effects.  In that sense, it is similar to the standard lapply function, but doesn't require the evaluation of a function.  Using foreach without side effects also facilitates executing the loop in parallel.",
+        "usage": "Used for the foreach looping construct."
     },
     "dtplyr": {
         "version": "1.3.1",
-        "description": "Provides a data.table backend for 'dplyr'. The goal of 'dtplyr' is to allow you to write 'dplyr' code that is automatically translated to the equivalent, but usually much faster, data.table code."
+        "description": "Provides a data.table backend for 'dplyr'. The goal of 'dtplyr' is to allow you to write 'dplyr' code that is automatically translated to the equivalent, but usually much faster, data.table code.",
+        "usage": "Used for providing a data.table backend for dplyr."
     },
     "lubridate": {
         "version": "1.9.4",
-        "description": "Functions to work with date-times and time-spans: fast and user friendly parsing of date-time data, extraction and updating of components of a date-time (years, months, days, hours, minutes, and seconds), algebraic manipulation on date-time and time-span objects. The 'lubridate' package has a consistent and memorable syntax that makes working with dates easy and fun."
+        "description": "Functions to work with date-times and time-spans: fast and user friendly parsing of date-time data, extraction and updating of components of a date-time (years, months, days, hours, minutes, and seconds), algebraic manipulation on date-time and time-span objects. The 'lubridate' package has a consistent and memorable syntax that makes working with dates easy and fun.",
+        "usage": "Used for working with date-times and time-spans."
     },
     "rmarkdown": {
         "version": "2.29",
-        "description": "Convert R Markdown documents into a variety of formats."
+        "description": "Convert R Markdown documents into a variety of formats.",
+        "usage": "Used for converting R Markdown documents."
     },
     "highr": {
         "version": "0.11",
-        "description": "Provides syntax highlighting for R source code. Currently it supports LaTeX and HTML output. Source code of other languages is supported via Andre Simon's highlight package (<https://gitlab.com/saalen/highlight>)."
+        "description": "Provides syntax highlighting for R source code. Currently it supports LaTeX and HTML output. Source code of other languages is supported via Andre Simon's highlight package (<https://gitlab.com/saalen/highlight>).",
+        "usage": "Used for syntax highlighting for R source code."
     },
     "classInt": {
         "version": "0.4-11",
-        "description": "Selected commonly used methods for choosing univariate class intervals for mapping or other graphics purposes."
+        "description": "Selected commonly used methods for choosing univariate class intervals for mapping or other graphics purposes.",
+        "usage": "Used for choosing univariate class intervals."
     },
     "textshaping": {
         "version": "1.0.0",
-        "description": "Provides access to the text shaping functionality in the 'HarfBuzz' library and the bidirectional algorithm in the 'Fribidi' library.  'textshaping' is a low-level utility package mainly for graphic devices that expands upon the font tool-set provided by the 'systemfonts' package."
+        "description": "Provides access to the text shaping functionality in the 'HarfBuzz' library and the bidirectional algorithm in the 'Fribidi' library.  'textshaping' is a low-level utility package mainly for graphic devices that expands upon the font tool-set provided by the 'systemfonts' package.",
+        "usage": "Used for text shaping."
     },
     "data.table": {
         "version": "1.17.0",
-        "description": "Fast aggregation of large data (e.g. 100GB in RAM), fast ordered joins, fast add/modify/delete of columns by group using no copies at all, list columns, friendly and fast character-separated-value read/write. Offers a natural and flexible syntax, for faster development."
+        "description": "Fast aggregation of large data (e.g. 100GB in RAM), fast ordered joins, fast add/modify/delete of columns by group using no copies at all, list columns, friendly and fast character-separated-value read/write. Offers a natural and flexible syntax, for faster development.",
+        "usage": "Used for fast aggregation and manipulation of large data."
     },
     "tidyverse": {
         "version": "2.0.0",
-        "description": "The 'tidyverse' is a set of packages that work in harmony because they share common data representations and 'API' design. This package is designed to make it easy to install and load multiple 'tidyverse' packages in a single step. Learn more about the 'tidyverse' at <https://www.tidyverse.org>."
+        "description": "The 'tidyverse' is a set of packages that work in harmony because they share common data representations and 'API' design. This package is designed to make it easy to install and load multiple 'tidyverse' packages in a single step. Learn more about the 'tidyverse' at <https://www.tidyverse.org>.",
+        "usage": "Used for installing and loading multiple tidyverse packages."
     },
     "gtable": {
         "version": "0.3.6",
-        "description": "Tools to make it easier to work with \"tables\" of 'grobs'. The 'gtable' package defines a 'gtable' grob class that specifies a grid along with a list of grobs and their placement in the grid. Further the package makes it easy to manipulate and combine 'gtable' objects so that complex compositions can be built up sequentially."
+        "description": "Tools to make it easier to work with \"tables\" of 'grobs'. The 'gtable' package defines a 'gtable' grob class that specifies a grid along with a list of grobs and their placement in the grid. Further the package makes it easy to manipulate and combine 'gtable' objects so that complex compositions can be built up sequentially.",
+        "usage": "Used for working with tables of grobs."
     },
     "prettyunits": {
         "version": "1.2.0",
-        "description": "Pretty, human readable formatting of quantities. Time intervals: '1337000' -> '15d 11h 23m 20s'. Vague time intervals: '2674000' -> 'about a month ago'. Bytes: '1337' -> '1.34 kB'. Rounding: '99' with 3 significant digits -> '99.0' p-values: '0.00001' -> '<0.0001'. Colors: '#FF0000' -> 'red'. Quantities: '1239437' -> '1.24 M'."
+        "description": "Pretty, human readable formatting of quantities. Time intervals: '1337000' -> '15d 11h 23m 20s'. Vague time intervals: '2674000' -> 'about a month ago'. Bytes: '1337' -> '1.34 kB'. Rounding: '99' with 3 significant digits -> '99.0' p-values: '0.00001' -> '<0.0001'. Colors: '#FF0000' -> 'red'. Quantities: '1239437' -> '1.24 M'.",
+        "usage": "Used for pretty formatting of quantities."
     },
     "chron": {
         "version": "2.3-62",
-        "description": "Provides chronological objects which can handle dates and times."
+        "description": "Provides chronological objects which can handle dates and times.",
+        "usage": "Used for handling dates and times."
     },
     "mime": {
         "version": "0.12",
-        "description": "Guesses the MIME type from a filename extension using the data derived from /etc/mime.types in UNIX-type systems."
+        "description": "Guesses the MIME type from a filename extension using the data derived from /etc/mime.types in UNIX-type systems.",
+        "usage": "Used for guessing MIME types."
     },
     "vroom": {
         "version": "1.6.5",
-        "description": "The goal of 'vroom' is to read and write data (like 'csv', 'tsv' and 'fwf') quickly. When reading it uses a quick initial indexing step, then reads the values lazily , so only the data you actually use needs to be read.  The writer formats the data in parallel and writes to disk asynchronously from formatting."
+        "description": "The goal of 'vroom' is to read and write data (like 'csv', 'tsv' and 'fwf') quickly. When reading it uses a quick initial indexing step, then reads the values lazily , so only the data you actually use needs to be read.  The writer formats the data in parallel and writes to disk asynchronously from formatting.",
+        "usage": "Used for reading and writing data quickly."
     },
     "testthat": {
         "version": "3.2.3",
-        "description": "Software testing is important, but, in part because it is frustrating and boring, many of us avoid it. 'testthat' is a testing framework for R that is easy to learn and use, and integrates with your existing 'workflow'."
+        "description": "Software testing is important, but, in part because it is frustrating and boring, many of us avoid it. 'testthat' is a testing framework for R that is easy to learn and use, and integrates with your existing 'workflow'.",
+        "usage": "Used for software testing."
     },
     "processx": {
         "version": "3.8.6",
-        "description": "Tools to run system processes in the background.  It can check if a background process is running; wait on a background process to finish; get the exit status of finished processes; kill background processes. It can read the standard output and error of the processes, using non-blocking connections. 'processx' can poll a process for standard output or error, with a timeout. It can also poll several processes at once."
+        "description": "Tools to run system processes in the background.  It can check if a background process is running; wait on a background process to finish; get the exit status of finished processes; kill background processes. It can read the standard output and error of the processes, using non-blocking connections. 'processx' can poll a process for standard output or error, with a timeout. It can also poll several processes at once.",
+        "usage": "Used for running system processes in the background."
     },
     "igraph": {
         "version": "2.1.4",
-        "description": "Routines for simple graphs and network analysis. It can handle large graphs very well and provides functions for generating random and regular graphs, graph visualization, centrality methods and much more."
+        "description": "Routines for simple graphs and network analysis. It can handle large graphs very well and provides functions for generating random and regular graphs, graph visualization, centrality methods and much more.",
+        "usage": "Used for graph and network analysis."
     },
     "cellranger": {
         "version": "1.1.0",
-        "description": "Helper functions to work with spreadsheets and the \"A1:D10\" style of cell range specification."
+        "description": "Helper functions to work with spreadsheets and the \"A1:D10\" style of cell range specification.",
+        "usage": "Used for working with spreadsheets."
     },
     "dplyr": {
         "version": "1.1.4",
-        "description": "A fast, consistent tool for working with data frame like objects, both in memory and out of memory."
+        "description": "A fast, consistent tool for working with data frame like objects, both in memory and out of memory.",
+        "usage": "Used for working with data frame like objects."
     },
     "gargle": {
         "version": "1.5.2",
-        "description": "Provides utilities for working with Google APIs <https://developers.google.com/apis-explorer>.  This includes functions and classes for handling common credential types and for preparing, executing, and processing HTTP requests."
+        "description": "Provides utilities for working with Google APIs <https://developers.google.com/apis-explorer>.  This includes functions and classes for handling common credential types and for preparing, executing, and processing HTTP requests.",
+        "usage": "Used for working with Google APIs."
     },
     "cpp11": {
         "version": "0.5.2",
-        "description": "Provides a header only, C++11 interface to R's C interface.  Compared to other approaches 'cpp11' strives to be safe against long jumps from the C API as well as C++ exceptions, conform to normal R function semantics and supports interaction with 'ALTREP' vectors."
+        "description": "Provides a header only, C++11 interface to R's C interface.  Compared to other approaches 'cpp11' strives to be safe against long jumps from the C API as well as C++ exceptions, conform to normal R function semantics and supports interaction with 'ALTREP' vectors.",
+        "usage": "Used for providing a C++11 interface to R's C interface."
     },
     "tidyselect": {
         "version": "1.2.1",
-        "description": "A backend for the selecting functions of the 'tidyverse'.  It makes it easy to implement select-like functions in your own packages in a way that is consistent with other 'tidyverse' interfaces for selection."
+        "description": "A backend for the selecting functions of the 'tidyverse'.  It makes it easy to implement select-like functions in your own packages in a way that is consistent with other 'tidyverse' interfaces for selection.",
+        "usage": "Used for implementing select-like functions."
     }
 }

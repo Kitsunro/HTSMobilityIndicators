@@ -160,12 +160,15 @@ population_df <- personne %>%
   mutate(pop = mov + not_mov)
 
 saveRDS(population_df, getFilePath(args$rds, 'population.rds'))
+#write_csv(population_df,getFilePath(args$csv, 'population.csv'))
 
 # we are only using activity classes, even though classes according to modes were computed
 class_path <- getFilePath(args$rds, 'act_class_ref.rds')
 if (file.exists(class_path)){
   class_ref <- readRDS(class_path)
-  computePopulationPerClass(df = personne, class_ref = class_ref, file_name = getFilePath(args$rds, 'pop_class.rds'))
+  popclass = computePopulationPerClass(df = personne, class_ref = class_ref, file_name = getFilePath(args$rds, 'pop_class.rds'))
+  write_csv(popclass, getFilePath(args$csv, 'pop_class.csv'))
+  saveRDS(popclass, getFilePath(args$rds, 'pop_class.rds'))
 }
 
 # extract the useful variables  
@@ -177,6 +180,7 @@ depla_df <- depla %>%
   filter(D4A <= 28 & D8A <= 28)
 
 saveRDS(depla_df, getFilePath(args$rds, 'deplacement.rds'))
+#write_csv(depla_df, getFilePath(args$csv, 'deplacement.csv'))
 
 # extends the deplacement table so that we can estimate the number of people moving/stopped at each hour
 deplaexpanded <- depla_df %>%
@@ -195,6 +199,9 @@ deplaexpanded <- depla_df %>%
          coem = ifelse(is.na(coem), lead(coem), coem)) # if the value is NA, replace it by the value on the next row
 
 saveRDS(deplaexpanded, getFilePath(args$rds, 'deplaexpanded.rds'))
+write_csv(deplaexpanded, getFilePath(args$csv, 'deplaexpanded.csv'))
+#write only the 1000 first rows to avoid large files
+#write_csv(deplaexpanded[1:1000,], getFilePath(args$csv, 'deplaexpanded_sample.csv'))
 
 # append the mode of transport of the trajet table to deplacement
 deplatraj <- depla %>%
@@ -207,3 +214,22 @@ deplatraj <- depla %>%
   left_join(coem_ref, by=c('hcode'='hcode'))
 
 saveRDS(deplatraj, getFilePath(args$rds, 'deplatraj.rds'))
+#write_csv(deplatraj, getFilePath(args$csv, 'deplatraj.csv'))
+#write_csv(deplatraj[1:1000,], getFilePath(args$csv, 'deplatraj_sample.csv'))
+
+# create the final table by fusing the deplaexpanded and deplatraj tables
+mobility_df <- deplaexpanded %>%
+  left_join(deplatraj, by=c('hcode'='hcode', 'pcode'='pcode','D1'='D1','D3'='D3', 'D4A'='D4A', 'D4B'='D4B', 'D5'='D5', 'D7'='D7', 'D8A'='D8A', 'D8B'='D8B','coem'='coem')) %>%
+  filter(!(is.na(D4A) & is.na(D4B))) %>%
+  mutate(UUID = (as.numeric(hcode) * as.numeric(pcode)) %% 1000000 ) %>%
+  mutate(trip_UUID = ( 3 * as.numeric(UUID) * as.numeric(D1)) %% 1000000) %>%
+  mutate(D4 = paste0(D4A, ':', D4B)) %>%
+  mutate(D8 = paste0(D8A, ':', D8B)) %>%
+  mutate(D4 = ifelse(D4 == 'NA:NA', NA, D4)) %>%
+  mutate(D8 = ifelse(D8 == 'NA:NA', NA, D8)) %>%
+  rename(start_time = D4, end_time = D8, census_block_start = D3, census_block_end = D7, trip_purpose_start = D2, trip_purpose_end = D5, transportation_mode = T3) %>%
+  select(UUID, trip_UUID, transportation_mode, trip_purpose_start, census_block_start, start_time, trip_purpose_end, census_block_end, end_time, coem)
+
+saveRDS(mobility_df, getFilePath(args$rds, 'mobility_df.rds'))
+#write_csv(mobility_df, getFilePath(args$csv, 'mobility_df.csv'))
+write_csv(mobility_df[1:1000,], getFilePath(args$csv, 'mobility_df_sample.csv'))

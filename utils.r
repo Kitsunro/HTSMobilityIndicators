@@ -132,10 +132,10 @@ computePopulationPerClass <- function(df, class_ref, file_name){
     mutate(pop = ifelse(is.na(pop), not_mov, pop), class = replace_na(class, 'not_mov')) %>%
     select(TIRA, class, pop) %>%
     rename(code = TIRA)
-  
-  saveRDS(population_df, file_name)
-  print(paste('Saved as', file_name))
+  return(population_df)
 }
+  #saveRDS(population_df, file_name)
+  #print(paste('Saved as', file_name))
 
 getFilePath <- function(file_path, file_name){
   paste0(file_path, args$area, '/', file_name)

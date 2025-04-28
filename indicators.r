@@ -12,7 +12,7 @@ args <- parser$parse_args()
 
 # temporary
 args$area = 'lyon'
-args$indicator = 'flows'
+args$indicator = 'presence'
 
 loadPackages(c('plyr', 'tidyverse', 'flows', 'jsonlite'))
 

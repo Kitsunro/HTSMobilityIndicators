@@ -12,11 +12,13 @@ getColors <- function(){
     colors
 }
 
+#code personne
 getPCode <- function(val1, val2, val3, val4){
   val <- unique(val2)
   if(length(val) == 1 & is.na(val)) paste0(val1, str_pad(val3, 4, pad = '0'), str_pad(val4, 2, pad = '0')) else paste0(val1, str_pad(val2, 3, pad = '0'), str_pad(val3, 4, pad = '0'), str_pad(val4, 2, pad = '0'))
 }
 
+#code menage
 getHCode <- function(val1, val2, val3){
   val <- unique(val2)
   if(length(val) == 1 & is.na(val)) paste0(val1, str_pad(val3, 4, pad = '0')) else paste0(val1, str_pad(val2, 3, pad = '0'), str_pad(val3, 4, pad = '0'))

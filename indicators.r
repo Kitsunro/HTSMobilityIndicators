@@ -30,6 +30,8 @@ deplaexpanded_df <- loadFile(getFilePath(args$rds, 'deplaexpanded.rds')) %>%
   mutate(D7 = getPullingZone(D7))
 deplatraj_df <- loadFile(getFilePath(args$rds, 'deplatraj.rds')) %>%
   mutate(D3 = getPullingZone(D3), D7 = getPullingZone(D7))
+mobility_df <- loadFile(getFilePath(args$rds, 'mobility_df.rds')) %>%
+  mutate(census_block_start = getPullingZone(D3), census_block_end = getPullingZone(D7))
 
 space_ref <- loadFile(getFilePath(args$rds, 'space_ref.rds')) %>%
   mutate_all(function(x) (as.numeric(x)))

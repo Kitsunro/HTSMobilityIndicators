@@ -5,20 +5,22 @@
 #--------------------------------------------------------------------------------
 
 #----------------------------------------------------------
-# generate indicators of presence (in general and per activity), fluctuation and attractiveness
-# aggregate_time indicates the time aggregation, TRUE for a unique time interval of 24 hours and FALSE for 24 one-hour periods
-# partition : the territorial partition over with calculate the indicators (none indicates the whole studied territory)
-# sf : the shape file for the corresponding partition, from which we recover the surface for computing presence density
-# pop_df : a table indicating the population of each spatial location of the given territorial partition
-# depla_df : the deplacement table expanded per hour (generate by expandTime())
-# traj_df : the trajet table expanded per hour (generate by expantTrajet()), to compute the indicators of presence per mode of transport
-
+# Main function to generate indicators of presence, fluctuation, and attractiveness
+#----------------------------------------------------------
+# depla_df: expanded deplacement table
+# traj_df: expanded trajet table
+# pop_df: population data for spatial locations
+# sf: shapefile for spatial partition (optional)
+# partition: territorial partition (default: 'none')
+# aggregate_time: TRUE for 24-hour aggregation, FALSE for hourly
+# aggregate_space: TRUE for aggregated space, FALSE for disaggregated
+# per_class: TRUE to calculate indicators per class
 getIndicators <- function(depla_df, traj_df, pop_df, sf = NULL, partition = 'none', aggregate_time = FALSE, aggregate_space = FALSE, per_class = FALSE){
 
   temporal <- c('start', 'end')
   by_temporal <- c('start'='start', 'end'='end')
   
-  # return the variables used for detecting distinct rows
+  # Helper function to define variables for distinct rows
   distinct_vars <- function(status = FALSE){
     vars <- if (status)
         if (per_class) c('pcode', 'status', 'class') else c('pcode', 'status')
@@ -29,7 +31,7 @@ getIndicators <- function(depla_df, traj_df, pop_df, sf = NULL, partition = 'non
     return(vars)
   }
   
-  # return the variables to group
+  # Helper function to define grouping variables
   group_vars <- function(status = FALSE, pcode = FALSE){
     vars <- if (per_class) 
       if (status) c('status', 'class') else if (pcode) c('pcode', 'class') else c('class')
@@ -43,7 +45,7 @@ getIndicators <- function(depla_df, traj_df, pop_df, sf = NULL, partition = 'non
     return(vars)
   }
   
-  # return the variables to select on the modes and activity indicators
+  # Helper function to define variables for selection
   select_vars <- function(){
     vars <- c('status', 'total')
     vars <- if(aggregate_space) vars else c('code', vars)
@@ -51,7 +53,7 @@ getIndicators <- function(depla_df, traj_df, pop_df, sf = NULL, partition = 'non
     if (per_class) c(vars, 'class') else vars
   }
   
-  # return the variables to compare inside a left_join
+  # Helper function to define variables for comparison in joins
   compare_vars <- function(status = TRUE){
     vars <- if (aggregate_space) c() else c('code')
     vars <- if (aggregate_time) vars else c(vars, 'start', 'end')
@@ -59,6 +61,7 @@ getIndicators <- function(depla_df, traj_df, pop_df, sf = NULL, partition = 'non
     if (status) c(vars, 'status') else vars
   }
   
+  # Calculate presence indicators
   getPresence <- function(df){
     presence <- df %>% distinct_at(distinct_vars(), .keep_all = TRUE) %>%
       group_by_at(group_vars()) %>%
@@ -91,6 +94,7 @@ getIndicators <- function(depla_df, traj_df, pop_df, sf = NULL, partition = 'non
     }
   }
   
+  # Calculate presence indicators per status (activity or mode)
   getPresencePerStatus <- function(df){
     temp <- df %>%
       distinct_at(distinct_vars(status = TRUE), .keep_all = TRUE) %>%
@@ -114,16 +118,19 @@ getIndicators <- function(depla_df, traj_df, pop_df, sf = NULL, partition = 'non
         mutate(value = total/pres, value_multi = total_multi/total)
   }
   
+  # Compute presence indicators for modes of transport
   presence <- getPresence(df = traj_df) %>% mutate(status = 'modes')
   print(paste('Computing indicator of presence PER MODE OF TRANSPORT Space:', ifelse(aggregate_space, 'aggregate.', 'disaggregate.'), 'Time:', ifelse(aggregate_time, 'aggregate.', 'disaggregate.'), ifelse(per_class, 'Per Class.', '')))
   modes <- getPresencePerStatus(df = traj_df) %>% mutate(indicator = 'modes') %>% arrange(match(status, c("car", "walk", "pts", 'bike', 'other')))
   bind_df <- bind_rows(presence, modes)
   
+  # Compute presence indicators for activities
   presence = getPresence(df = depla_df) %>% mutate(status = 'activity')
   print(paste('Computing indicator of presence PER ACTIVITY. Space:', ifelse(aggregate_space, 'aggregate.', 'disaggregate.'), 'Time:', ifelse(aggregate_time, 'aggregate.', 'disaggregate.'), ifelse(per_class, 'Per Class.', '')))
   activity <- getPresencePerStatus(df = depla_df) %>% mutate(indicator = 'activity')
   bind_df <- bind_rows(bind_df, presence, activity)
   
+  # Compute fluctuation and attractiveness indicators if applicable
   fluctuation <- tibble()
   attractivity <- tibble()
   
@@ -151,6 +158,7 @@ getIndicators <- function(depla_df, traj_df, pop_df, sf = NULL, partition = 'non
     }
   }
   
+  # Combine all indicators into a single table
   print('Binding indicators into a unique table...')
   
   if (aggregate_space) 
@@ -164,11 +172,11 @@ getIndicators <- function(depla_df, traj_df, pop_df, sf = NULL, partition = 'non
              space = 'individual')
 }
 
+#-----------------------------------------------------------
+# Main function to generate all presence indicators
+#-----------------------------------------------------------
 generateIndicators <- function(){
-  #-----------------------------------------------------------
-  # rename the spatial location and motivation variables
-  # delete all locations outside the studied territory
-  # prepare data for using activities
+  # Prepare deplacement data
   depla_df <- deplaexpanded_df %>% rename(code = D7, status = D5) %>%
     filter(code %in% space_ref$DTIR) %>%
     mutate(status = mapvalues(status, as.numeric(activity_ref$code), activity_ref$desc_en, warn_missing = FALSE)) 
@@ -176,7 +184,7 @@ generateIndicators <- function(){
   if (args$class)
     depla_df <- depla_df %>% left_join(class_ref, by = c('pcode'='pcode')) # to calculate the presence per activity and class (state distribution plot)
   
-  # prepare data for using modes of transport
+  # Prepare trajet data
   traj_df <- deplatraj_df %>% rename(code = D7, status = T3) %>%
     filter(code %in% space_ref$DTIR) %>%
     mutate(status = mapvalues(status, as.numeric(mode_ref$code), mode_ref$desc_en, warn_missing = FALSE)) %>%
@@ -185,19 +193,21 @@ generateIndicators <- function(){
   if (args$class)
     traj_df <- traj_df %>% left_join(class_ref, by = c('pcode'='pcode')) # to calculate the presence per activity and class (state distribution plot)
   
+  # Expand deplacement and trajet tables by time intervals
   print('Expanding deplacement table according to one-hour time intervals...')
   deplaexp <- expandTime(depla_df) # deplacement table hourly expanded per spatial location
   
   print('Expanding trips table according to one-hour time intervals...')
   trajexp <- expandTrajet(traj_df) # trajet table expanded per hour and per spatial location
   
-  # presence over the whole studied territory (used for the details on the state distribution plot)
+  # Compute aggregated and disaggregated indicators
   aggreg <- getIndicators(depla_df = deplaexp, traj_df = trajexp, pop_df = population_df, aggregate_space = TRUE, aggregate_time = TRUE) # indicators of presence general and per activity over 24 hours
   disaggreg <- getIndicators(depla_df = deplaexp, traj_df = trajexp, pop_df = population_df, aggregate_space = TRUE) # indicators of presence general and per activity per time interval
   
-  # bind all tables into a big one
+  # Combine results into a single table
   presence_df <- bind_rows(aggreg, disaggreg)
   
+  # Compute indicators per class if applicable
   if (args$class){
     aggreg_class <- getIndicators(depla_df = deplaexp, traj_df = trajexp, pop_df = population_df, aggregate_space = TRUE, aggregate_time = TRUE, per_class = TRUE)
     disaggreg_class <- getIndicators(depla_df = deplaexp, traj_df = trajexp, pop_df = population_df, aggregate_space = TRUE, per_class = TRUE)
@@ -205,7 +215,7 @@ generateIndicators <- function(){
     presence_df <- bind_rows(presence_df, aggreg_class, disaggreg_class)
   }
 
-  # indicators per territorial partition. space : disaggregate.
+  # Compute indicators for each territorial partition
   for (p in args$partitions){
     print(paste('Computing indicators for territorial partition', p, '...'))
 
@@ -233,6 +243,7 @@ generateIndicators <- function(){
     
   }
   
+  # Prepare final output
   select_final_vars <- function(){
     vars <- c('time', 'space', 'code', 'name', 'start', 'end', 'indicator', 'status', 'total', 'value', 'density', 'total_multi', 'value_multi', 'partition')
     if(args$class) c(vars, 'class') else vars
@@ -250,6 +261,7 @@ generateIndicators <- function(){
   print(paste('Saved as', file_name))
 }
 
+# Start generating indicators
 print(paste('Generating presence indicators for', args$area, 'area'))
 generateIndicators()
 

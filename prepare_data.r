@@ -9,12 +9,17 @@ args <- parser$parse_args()
 args$area = 'lyon'
 args$partitions = c('OD', 'DTIR', 'D30', 'D10')
 
-loadPackages(c('plyr', 'tidyverse', 'sf', 'foreign', 'rlang'))
+loadPackages(c('plyr', 'tidyverse', 'sf', 'foreign', 'rlang','digest'))
 
 #--------------------------------------------
 # load the shapefiles for each territorial partition
 
 sf_use_s2(FALSE)  # Disable the use of S2 geometry library
+
+# function to generate a hash
+getHashOf <- function(x) {
+  hash <- digest(as.character(x), algo = "sha256")
+}
 
 getSamplePoints <- function(points, sf){ # generate random points within each spatial location to represent activities or modes of transport (used on the STC)
   
@@ -207,3 +212,31 @@ deplatraj <- depla %>%
   left_join(coem_ref, by=c('hcode'='hcode'))
 
 saveRDS(deplatraj, getFilePath(args$rds, 'deplatraj.rds'))
+
+#write_csv(deplatraj, getFilePath(args$csv, 'deplatraj.csv'))
+#write_csv(deplatraj[1:1000,], getFilePath(args$csv, 'deplatraj_sample.csv'))
+
+mode_ref <- loadFile(getFilePath(args$rds, 'modes_ref.rds')) %>%
+  mutate(code = as.numeric(code))
+
+activity_ref <- loadFile(getFilePath(args$rds, 'activity_ref.rds')) %>%
+  mutate(code = as.numeric(code))
+
+# create the final table by fusing the deplaexpanded and deplatraj tables
+mobility_df <- deplaexpanded %>%
+  left_join(deplatraj, by=c('hcode'='hcode', 'pcode'='pcode','D1'='D1','D3'='D3', 'D4A'='D4A', 'D4B'='D4B', 'D5'='D5', 'D7'='D7', 'D8A'='D8A', 'D8B'='D8B','coem'='coem')) %>%
+  filter(!(is.na(D4A) & is.na(D4B))) %>%
+  mutate(UUID = getHashOf(as.numeric(hcode) * as.numeric(pcode))) %>%
+  mutate(D4 = paste0(D4A, ':', D4B)) %>%
+  mutate(D8 = paste0(D8A, ':', D8B)) %>%
+  mutate(D4 = ifelse(D4 == 'NA:NA', NA, D4)) %>%
+  mutate(D8 = ifelse(D8 == 'NA:NA', NA, D8)) %>%
+  mutate(T3 = mapvalues(T3, as.numeric(mode_ref$code), mode_ref$desc_en, warn_missing = FALSE)) %>%
+  mutate(D2 = mapvalues(D2, as.numeric(activity_ref$code), activity_ref$desc_en, warn_missing = FALSE)) %>%
+  mutate(D5 = mapvalues(D5, as.numeric(activity_ref$code), activity_ref$desc_en, warn_missing = FALSE)) %>%
+  rename(trip_number = D1,start_time = D4, end_time = D8, census_block_start = D3, census_block_end = D7, trip_purpose_start = D2, trip_purpose_end = D5, transportation_mode = T3) %>%
+  select(UUID, trip_number, transportation_mode, trip_purpose_start, census_block_start, start_time, trip_purpose_end, census_block_end, end_time, coem)
+
+saveRDS(mobility_df, getFilePath(args$rds, 'mobility_df.rds'))
+#write_csv(mobility_df, getFilePath(args$csv, 'mobility_df.csv'))
+write_csv(mobility_df[1:1000,], getFilePath(args$csv, 'mobility_df_sample.csv'))

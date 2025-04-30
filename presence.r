@@ -177,9 +177,7 @@ getIndicators <- function(depla_df, traj_df, pop_df, sf = NULL, partition = 'non
 #-----------------------------------------------------------
 generateIndicators <- function(){
   # Prepare deplacement data
-  depla_df <- deplaexpanded_df %>% rename(code = D7, status = D5) %>%
-    filter(code %in% space_ref$DTIR) %>%
-    mutate(status = mapvalues(status, as.numeric(activity_ref$code), activity_ref$desc_en, warn_missing = FALSE)) 
+  mobility_df <- mobility_df %>% rename(code = D7, status = D5) %>%
   
   if (args$class)
     depla_df <- depla_df %>% left_join(class_ref, by = c('pcode'='pcode')) # to calculate the presence per activity and class (state distribution plot)

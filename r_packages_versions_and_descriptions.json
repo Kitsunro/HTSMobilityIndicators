@@ -753,5 +753,10 @@
         "version": "1.2.1",
         "description": "A backend for the selecting functions of the 'tidyverse'.  It makes it easy to implement select-like functions in your own packages in a way that is consistent with other 'tidyverse' interfaces for selection.",
         "usage": "Used for implementing select-like functions."
+    },
+    "lwgeom": {
+        "version": "0.2-10",
+        "description": "Provides an interface to the 'GEOS' library for geometry operations. It is a wrapper around the 'GEOS' C API, and provides a set of functions for manipulating and analyzing geometric objects.",
+        "usage": "Used for geometry operations."
     }
 }
